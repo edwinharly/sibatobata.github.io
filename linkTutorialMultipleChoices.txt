@@ -1,0 +1,1 @@
+https://www.theodo.fr/blog/2015/11/how-to-quickly-develop-a-quiz-component-with-reactjs/
