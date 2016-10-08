@@ -57,12 +57,24 @@ h6 {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+#mulaiAI {
+    padding: 15px 35px;
+    margin: 30px;
+    background: rgba(245,70,70,1);
+    color: white;
+    border-width: 2px;
+}
+#mulaiAI:hover {
+    border: 2px solid white;
+    background: rgba(245,70,70,0.8);
+}
+
 .btnKategori {
     margin: 0;
     padding: 0;
 }
 .btnKategori li {
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
 .intro-message > h3 {
