@@ -69,6 +69,10 @@ h6 {
     background: rgba(245,70,70,0.8);
 }
 
+#btnTanaman, #btnPenyakit {
+    font-size: 13px;
+}
+
 .btnKategori {
     margin: 0;
     padding: 0;
