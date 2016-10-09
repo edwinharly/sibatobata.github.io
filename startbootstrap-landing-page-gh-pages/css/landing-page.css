@@ -85,6 +85,27 @@ h6 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
+#quizContainer {
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+#quizContainer button {
+    margin-left: -320px;
+}
+
+#radioContainer {
+    position: relative;
+    width: 200px;
+    margin: 30px 50px;
+    text-align: left;
+}
+
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
