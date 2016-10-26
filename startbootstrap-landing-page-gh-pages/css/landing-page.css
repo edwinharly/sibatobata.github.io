@@ -103,7 +103,7 @@ h6 {
     margin: 0 auto;
 }
 #quizContainer button {
-    margin-left: -320px;
+    margin-left: 0px; // -320px
 }
 
 #kesimpulanPenyakitContainer {
