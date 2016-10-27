@@ -1,3 +1,4 @@
+# PERHATIAN !!! Jangan pernah coding dan push ke branch master ini, checkout ke branch "dev" dan coding di sana
 # SiBatoBata
 
 ### Fitur-Fitur yang akan dibangun :
