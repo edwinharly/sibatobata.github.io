@@ -54,4 +54,34 @@ module.exports = function (app, passport) {
 		.get(isLoggedIn, clickHandler.getClicks)
 		.post(isLoggedIn, clickHandler.addClick)
 		.delete(isLoggedIn, clickHandler.resetClicks);
+
+	// =====================================
+    // FACEBOOK ROUTES =====================
+    // =====================================
+    // route for facebook authentication and login
+    app.route('/auth/facebook')
+    	.get(passport.authenticate('facebook'));
+
+    // handle the callback after facebook has authenticated the user
+    app.route('/auth/facebook/callback')
+    	.get(passport.authenticate('facebook', {
+            failureRedirect : '/login'
+        }),
+		function(req, res) {
+			res.redirect('/');
+		}
+        );
+
+    // =====================================
+    // TWITTER ROUTES ======================
+    // =====================================
+    // route for twitter authentication and login
+    app.get('/auth/twitter', passport.authenticate('twitter'));
+
+    // handle the callback after twitter has authenticated the user
+    app.get('/auth/twitter/callback',
+        passport.authenticate('twitter', {
+            successRedirect : '/',
+            failureRedirect : '/login'
+        }));
 };
