@@ -42,7 +42,7 @@ h6 {
 .intro-message {
     position: relative;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 5px;
 }
 
 .intro-message > h1 {
@@ -250,11 +250,15 @@ p.copyright {
 }   
 
 .detailContainer{
-position: relative;
-background: rgba(0,0,0,0.7);
-padding: 30px;
-width: 100%;
-margin: 0 auto;
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.detailContainer > h2{
+    margin-bottom: 30px;
 }
 
 .containerKiri{
@@ -282,7 +286,5 @@ margin: 0 auto;
 }
 
 p{
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-bottom: 20px
+    margin: 20px 2px;
 }
