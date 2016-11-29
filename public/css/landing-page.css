@@ -23,6 +23,7 @@ h6 {
 
 .topnav {
     font-size: 14px; 
+    height: 100px;
 }
 
 .lead {
@@ -31,7 +32,7 @@ h6 {
 }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
@@ -66,7 +67,7 @@ h6 {
 }
 
 #mulaiAI {
-    padding: 15px 35px;
+    padding: 15px 100px;
     margin: 30px;
     background: rgba(245,70,70,1);
     color: white;
@@ -287,4 +288,65 @@ p.copyright {
 
 p{
     margin: 20px 2px;
+}
+
+#featured {
+    background: url(../img/bg-featured.gif) repeat-x top center;;
+    height: 356px;
+    padding: 35px 0;
+    width: 100%;
+}
+
+#featured ul {
+    color: #545353;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    width: 950px;
+}
+
+#featured ul li.first {
+    margin-left: 0;
+}
+
+#featured ul li img {
+    border: 3px solid #fff;
+}
+
+#featured ul li span {
+    background: url(../img/bg-featured.jpg) no-repeat center;
+    display: block;
+    height: 15px;
+    margin-top: -6px;
+    width: 281px;
+}
+
+#featured ul li p {
+    line-height: 21px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+    text-shadow: 1px 1px 0 #e8e6e7;
+}
+
+#featured ul li a.link {
+    background: red;
+    color: #FDFDFB;
+    display: block;
+    height: 43px;
+    font-family: 'CarterOneRegular';
+    font-size: 16px;
+    line-height: 43px;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #216B20;
+    width: 281px;
+}
+
+#featured ul li {
+    float: left;
+    margin-left: 53px;
+    width: 281px;
 }
