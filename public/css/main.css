@@ -97,6 +97,16 @@ header a ~ p {
 	margin-left: 10px
 }
 
+#github-btn {
+	background-color: black;
+}
+#facebook-btn {
+	background-color: darkblue;
+}
+#twitter-btn {
+	background-color: lightskyblue;
+}
+
 /****** Logo Div Styling ******/
 
 img {
@@ -119,18 +129,20 @@ img {
 	text-align: center;
 }
 
+
 .btn {	/* Styling for buttons */
 	margin: 0 8px;
 	color: white;
-	background-color: #00BCD4;
+	
 	display: inline-block;
 	border: 0;
 	font-size: 14px;
 	border-radius: 3px;
 	padding: 10px 5px;
-	width: 100px;
+	width: 300px;
 	font-weight: 500;
 }
+
 
 .btn:focus {	/* Remove outline when hovering over button */
 	outline: none;

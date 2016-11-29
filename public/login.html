@@ -3,28 +3,43 @@
 <html>
 
 	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
+		<title>SiBatoBata - Aplikasi Tanaman Obat-Obatan.</title>
 		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
 		<div class="container">	
 			<div class="login">
-				<img src="/public/img/clementine_150.png" />
-				<br />
-				<p class="clementine-text">Clementine.js</p>
-				<a href="/auth/github">
-					<div class="btn" id="login-btn">
-						<img src="/public/img/github_32px.png" alt="github logo" />
-						<p>LOGIN WITH GITHUB</p>
-					</div>
-				</a>
-				<a href="/auth/facebook" class="btn btn-primary">
-					<span class="fa fa-facebook"></span>
-					LOGIN WITH FACEBOOK
-				</a>
-				<a href="/auth/twitter" class="btn btn-info"><span class="fa fa-twitter"></span> Twitter</a>
+				<p class="clementine-text">SiBatoBata</p>
+				<ul style="list-style-type: none">
+					<li>
+						<a href="/auth/github">
+							<div class="btn" id="github-btn">
+								<img src="img/github_32px.png" alt="github logo" />
+								<p><strong>LOGIN WITH GITHUB</strong></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/auth/facebook" class="btn-facebook">
+							<div class="btn" id="facebook-btn">
+								<img src="img/1480411429_square-facebook.png" alt="facebook logo" />
+								<p><strong>LOGIN WITH FACEBOOK</strong></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/auth/twitter">
+							<div class="btn" id="twitter-btn">
+								<img src="img/1480411365_twitter.png" alt="twitter logo" />
+								<p><strong>LOGIN WITH TWITTER</strong></p>
+							</div>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</body>
