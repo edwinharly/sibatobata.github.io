@@ -22,8 +22,14 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 16px; 
     height: 100px;
+}
+
+#judulkecil {
+    color: #02DC59;
+    font-weight: 900;
+    font-size: 35px;
 }
 
 .lead {
