@@ -27,9 +27,12 @@ h6 {
 }
 
 #judulkecil {
-    color: #02DC59;
+    color: #FD9B00;
     font-weight: 900;
     font-size: 35px;
+}
+#judul {
+    color: #FD9B00;
 }
 
 .lead {
@@ -110,6 +113,12 @@ h6 {
 
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+#penjelasan {
+    margin: 0 auto;
+    text-align: justify;
+    width: 300px;
 }
 
 #quizContainer {
@@ -297,10 +306,14 @@ p{
 }
 
 #featured {
-    background: url(../img/bg-featured.gif) repeat-x top center;;
-    height: 356px;
-    padding: 35px 0;
+    background: url(../img/bg-featured.gif) repeat-x top center;
+    background-size: contain;
+    padding: 35px 0 20px 0;
     width: 100%;
+}
+
+#featured h2 {
+    margin-left: 156px;
 }
 
 #featured ul {
@@ -318,6 +331,8 @@ p{
 
 #featured ul li img {
     border: 3px solid #fff;
+    width: 281px;
+    height: 171px;
 }
 
 #featured ul li span {
