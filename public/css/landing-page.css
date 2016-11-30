@@ -50,7 +50,6 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/bamboo-bg.jpg) no-repeat center center;
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/Jamu-Tradisional.jpg) no-repeat center center;
     background-size: cover;
     display: block;
@@ -129,9 +128,9 @@ h6 {
 }
 
 #penjelasan {
-    margin: 0 auto;
+    margin: 40px auto;
     text-align: justify;
-    width: 300px;
+    width: 400px;
 }
 
 #quizContainer {

@@ -21,6 +21,7 @@ body {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/ramuan-tradisional.jpg) center;
 }
 
 header {
@@ -83,9 +84,13 @@ header a ~ p {
 /****** Login Styling ******/
 
 .login {
-	margin: 86px 70px 0 auto;
+	margin: 200px auto 0 auto;
 	text-align: center;
+	border: 1px solid white;
+	width: 60%;
+	border-radius: 40px;
 }
+
 
 #login-btn {
 	width: 225px;
@@ -103,7 +108,7 @@ header a ~ p {
 }
 
 #github-btn {
-	background-color: black;
+	background-color: grey;
 }
 #facebook-btn {
 	background-color: #498DFF;
