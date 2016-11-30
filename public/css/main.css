@@ -78,7 +78,7 @@ header a ~ p {
 /****** Login Styling ******/
 
 .login {
-	margin: 86px auto 0 auto;
+	margin: 86px 70px 0 auto;
 	text-align: center;
 }
 
@@ -101,11 +101,12 @@ header a ~ p {
 	background-color: black;
 }
 #facebook-btn {
-	background-color: darkblue;
+	background-color: #498DFF;
 }
 #twitter-btn {
 	background-color: lightskyblue;
 }
+
 
 /****** Logo Div Styling ******/
 
@@ -114,12 +115,20 @@ img {
 	display: block;
 }
 
-.clementine-text { /* Styling for the Clementine.js text */
+.title-text { /* Styling for the Clementine.js text */
 	padding: 0;
 	margin: -25px 0 0 0;
-	font-weight: 500;
-	font-size: 60px;
+	font-weight: 600;
+	font-size: 100px;
 	color: #FFA000;
+}
+
+.subtitle-text {
+	padding: 0;
+	margin: -25px 0 50px 0;
+	font-weight: 600;
+	font-size: 29px;
+	color: #4AC36C;
 }
 
 /****** Click Styling ******/
@@ -131,7 +140,7 @@ img {
 
 
 .btn {	/* Styling for buttons */
-	margin: 0 8px;
+	margin: 8px 8px;
 	color: white;
 	
 	display: inline-block;
