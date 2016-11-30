@@ -39,6 +39,11 @@ p {
 	padding: 0;
 }
 
+.merek {
+	font-family: 'Permanent Marker', cursive;
+	color: #FD9B00;
+}
+
 /****** Header Styling ******/
 
 header p {

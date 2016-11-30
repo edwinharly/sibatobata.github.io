@@ -21,6 +21,11 @@ h6 {
     font-weight: 700;
 }
 
+.merek {
+    font-family: 'Permanent Marker', cursive;
+    color: #FD9B00;
+}
+
 .topnav {
     font-size: 16px; 
     height: 100px;
@@ -46,7 +51,15 @@ h6 {
     text-align: center;
     color: #f8f8f8;
     background: url(../img/bamboo-bg.jpg) no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/Jamu-Tradisional.jpg) no-repeat center center;
     background-size: cover;
+    display: block;
+    position: relative;
+}
+.intro-header::after {
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
 }
 
 .intro-message {
