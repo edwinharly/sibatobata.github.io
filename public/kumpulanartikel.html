@@ -137,7 +137,7 @@
                     </div>
                 </div>
             </div>
-
+            <p><a class='frm' href="http://www.mikroskil.ac.id">Outside Webpage (Iframe)</a></p>
         </div>
         <!-- /.container -->
 
@@ -170,12 +170,22 @@
             </div>
         </div>
     </footer>
-    <p><a class='iframe' href="http://wikipedia.com">Outside Webpage (Iframe)</a></p>
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="../node_modules/jquery-colorbox/jquery.colorbox.js"></script>
     <script>
-        $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+        $(".frm").colorbox({iframe:true, innerWidth:600, innerHeight:400});
+        ResizePopUp = function () {
+        var frameWidth = jQuery(".imgPopUpContainer").width();
+        var frameHeight = jQuery(".imgPopUpContainer").height();
+        try {
+          parent.jQuery.fn.colorbox.resize({ innerHeight: frameHeight, innerWidth: frameWidth });
+        } catch (e) { }
+      };
+      jQuery( window ).load(function() {
+        ResizePopUp();
+      });
     </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
