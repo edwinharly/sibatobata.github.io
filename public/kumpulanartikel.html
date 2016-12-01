@@ -23,6 +23,12 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     
+    
+
+    <script>
+
+    </script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -164,10 +170,13 @@
             </div>
         </div>
     </footer>
-
+    <p><a class='iframe' href="http://wikipedia.com">Outside Webpage (Iframe)</a></p>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
+    <script src="../node_modules/jquery-colorbox/jquery.colorbox.js"></script>
+    <script>
+        $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+    </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
