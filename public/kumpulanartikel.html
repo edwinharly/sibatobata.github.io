@@ -89,7 +89,7 @@
                                     <span></span>
                                     <p>8 Jenis jamur dan khasiatnya bagi tubuh.<br/>Merdeka.com - Ada begitu banyak jenis jamur yang menawarkan manfaat kesehatan. Pada dasarnya, jamur bukan sebuah tanaman atau binatang . . .
                                         </p>
-                                    <a class="link" href="#">Baca</a>
+                                    <a class="link" href="#" onclick="showArtikel('https://www.merdeka.com/sehat/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.html')">Baca</a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -137,7 +137,7 @@
                     </div>
                 </div>
             </div>
-            <p><a class='frm' href="http://www.mikroskil.ac.id">Outside Webpage (Iframe)</a></p>
+            
         </div>
         <!-- /.container -->
 
@@ -169,26 +169,33 @@
                 </div>
             </div>
         </div>
+        <button id="test">test modal</button>
     </footer>
     
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <script src="../node_modules/jquery-colorbox/jquery.colorbox.js"></script>
+    
     <script>
-        $(".frm").colorbox({iframe:true, innerWidth:600, innerHeight:400});
-        ResizePopUp = function () {
-        var frameWidth = jQuery(".imgPopUpContainer").width();
-        var frameHeight = jQuery(".imgPopUpContainer").height();
-        try {
-          parent.jQuery.fn.colorbox.resize({ innerHeight: frameHeight, innerWidth: frameWidth });
-        } catch (e) { }
-      };
-      jQuery( window ).load(function() {
-        ResizePopUp();
-      });
+        function showArtikel(url) {
+            var src = url;
+            $.modal('<iframe src="' + src + '" height="450" width="830" style="border:0">', {
+                closeHTML:"",
+                containerCss:{
+                    backgroundColor:"#fff", 
+                    borderColor:"#fff",
+                    height:450, 
+                    padding:0, 
+                    width:830,
+                    marginTop: "60px"
+                },
+                overlayClose:true
+            });
+        }
+        
     </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <<script src="js/jquery.simplemodal-1.4.4.js"></script>
 
 </body>
 

@@ -397,3 +397,8 @@ p{
     width: 281px;
     margin-bottom: 25px;
 }
+
+cboxIframe {
+    width: 600;
+    height: 400;
+}
