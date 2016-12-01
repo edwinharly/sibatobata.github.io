@@ -431,3 +431,29 @@ div form #search {
     padding: 0 0 0 10px;
     width: 208px;
 }
+
+#footer1 {
+    background: grey;
+    height: 300px;
+    width: 100%;
+}
+
+#footer1 div {
+    color: #dadada;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 5px;
+    width: 950px;
+}
+
+#footer1 div div.pertama {
+    margin-left: 0;
+}
+
+#footer1 div div {
+    float: left;
+    height: auto;
+    margin-left: 46px;
+    width: 286px;
+}
