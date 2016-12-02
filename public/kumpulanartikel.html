@@ -63,7 +63,7 @@
                         <a href="./homepage.html">Keluar</a>
                     </li>
                 </ul>
-                <form action="">
+                <form id="frmSearch" action="">
                     <input name="search" id="search" value="" type="text">
                     <input name="searchBtn" id="searchBtn" value="" type="submit">
                 </form>
@@ -82,6 +82,22 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
+                        <h2>Bookmark</h2>
+                        <hr class="intro-divider">
+                        <div id="bookmarked">
+                            <ul>
+                                <li class="first">
+                                    <a href="#">
+                                        <img id="berita-gambar-1" src="img/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.jpg" alt="8 Jenis Jamur dan Khasiatnya Bagi Tubuh">
+                                    </a>
+                                    <span></span>
+                                    <p>8 Jenis jamur dan khasiatnya bagi tubuh.<br/>Merdeka.com - Ada begitu banyak jenis jamur yang menawarkan manfaat kesehatan. Pada dasarnya, jamur bukan sebuah tanaman atau binatang . . .
+                                        </p>
+                                    <a class="link" href="#" onclick="showArtikel('https://www.merdeka.com/sehat/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.html')">Baca</a>
+                                </li>
+                            </ul>
+                        </div>
+
                         <h2>Kumpulan Artikel</h2>
                         <hr class="intro-divider">
                         <div id="featured" >
@@ -94,6 +110,7 @@
                                     <p>8 Jenis jamur dan khasiatnya bagi tubuh.<br/>Merdeka.com - Ada begitu banyak jenis jamur yang menawarkan manfaat kesehatan. Pada dasarnya, jamur bukan sebuah tanaman atau binatang . . .
                                         </p>
                                     <a class="link" href="#" onclick="showArtikel('https://www.merdeka.com/sehat/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.html')">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -103,6 +120,7 @@
                                     <p>5 Alasan untuk mulai menggosok gigi dengan minyak kelapa.<br/>Merdeka.com - Umumnya, kamu pasti akan menggosok gigi dengan pasta gigi yang dijual secara bebas. Sebabnya pasta gigi kaya . . .
                                         </p>
                                     <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -111,6 +129,7 @@
                                     <span></span>
                                     <p>Kunyah pinang, kebiasaan tradisional Indonesia pencegah kanker.<br/>Merdeka.com - Indonesia merupakan negara yang memiliki banyak tradisi kuno yang ajaibnya bermanfaat . . .</p>
                                     <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
                                 <li class="first">
                                     <a href="#">
@@ -119,6 +138,7 @@
                                     <span></span>
                                     <p>Kunyah pinang, kebiasaan tradisional Indonesia pencegah kanker.<br/>Merdeka.com - Indonesia merupakan negara yang memiliki banyak tradisi kuno yang ajaibnya bermanfaat . . .</p>
                                     <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -127,6 +147,7 @@
                                     <span></span>
                                     <p>Kunyah pinang, kebiasaan tradisional Indonesia pencegah kanker.<br/>Merdeka.com - Indonesia merupakan negara yang memiliki banyak tradisi kuno yang ajaibnya bermanfaat . . .</p>
                                     <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -135,6 +156,7 @@
                                     <span></span>
                                     <p>Kunyah pinang, kebiasaan tradisional Indonesia pencegah kanker.<br/>Merdeka.com - Indonesia merupakan negara yang memiliki banyak tradisi kuno yang ajaibnya bermanfaat . . .</p>
                                     <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -193,7 +215,7 @@
                 </div>
             </div>
         </div>
-        <button id="test">test modal</button>
+        
     </footer>
     
     <!-- jQuery -->

@@ -330,7 +330,7 @@ p{
     margin: 20px 2px;
 }
 
-#featured {
+#featured, #bookmarked {
     background: url(../img/bg-featured.gif) repeat-x top center;
     background-size: contain;
     padding: 35px 0 20px 0;
@@ -341,7 +341,7 @@ p{
     text-align: center;
 }
 
-#featured ul {
+#featured ul, #bookmarked ul {
     color: #545353;
     list-style: none;
     margin: 20px auto;
@@ -350,17 +350,17 @@ p{
     width: 950px;
 }
 
-#featured ul li.first {
+#featured ul li.first, #bookmarked ul li.first {
     margin-left: 0;
 }
 
-#featured ul li img {
+#featured ul li img, #bookmarked ul li img {
     border: 3px solid #fff;
     width: 281px;
     height: 171px;
 }
 
-#featured ul li span {
+#featured ul li span, #bookmarked ul li span {
     background: url(../img/bg-featured.jpg) no-repeat center;
     display: block;
     height: 15px;
@@ -368,7 +368,7 @@ p{
     width: 281px;
 }
 
-#featured ul li p {
+#featured ul li p, #bookmarked ul li p {
     line-height: 21px;
     margin-top: 15px;
     padding-bottom: 5px;
@@ -379,24 +379,55 @@ p{
 #featured ul li a.link {
     background: red;
     color: #FDFDFB;
-    display: block;
+    display: inline-block;
     height: 43px;
     font-family: 'CarterOneRegular';
     font-size: 16px;
     line-height: 43px;
-    margin-top: 25px;
+    margin-top: 5px;
     text-align: center;
     text-decoration: none;
     text-shadow: 1px 1px 0 #216B20;
-    width: 281px;
+    width: 229px;
 }
 
-#featured ul li {
+#featured ul li a.book {
+    background: orange;
+    color: #FDFDFB;
+    display: inline-block;
+    height: 43px;
+    font-family: 'CarterOneRegular';
+    font-size: 16px;
+    line-height: 43px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #216B20;
+    width: 38px;
+}
+
+#featured ul li, #bookmarked ul li {
     float: left;
     margin-left: 53px;
     width: 281px;
     margin-bottom: 25px;
 }
+
+#bookmarked ul li a.link {
+    background: red;
+    color: #FDFDFB;
+    display: inline-block;
+    height: 43px;
+    font-family: 'CarterOneRegular';
+    font-size: 16px;
+    line-height: 43px;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #216B20;
+    width: 241px;
+}
+
 
 #frmSearch {
     float: right;
