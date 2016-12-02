@@ -282,7 +282,7 @@ h6 {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #f8f8f8;
 }
 
@@ -302,6 +302,12 @@ p.copyright {
     margin-bottom: 30px;
 }
 
+.detailContainer #a{
+    margin: 20px 0 30px 32px;
+    text-align: left;
+    font-size: 20px;
+}
+
 .containerKiri{
     width: 770px;
     float: left;
@@ -313,6 +319,18 @@ p.copyright {
     overflow: hidden;
     background: black;
     margin-right: 5px;
+    margin-top: 50px;
+    height: 270px;
+}
+
+.extraContainer #a{
+    margin: 20px 0px 20px 32px;
+    text-align: left;
+}
+
+.extraContainer p{
+    margin: 20px 0 0 34px;
+    text-align: justify;
 }
 
 .gambar {
@@ -326,8 +344,9 @@ p.copyright {
     clear: both;
 }
 
-p{
-    margin: 20px 2px;
+#budidaya{
+    margin: 10px 0 2px 32px;
+    text-align: left;
 }
 
 #featured, #bookmarked {
@@ -374,6 +393,11 @@ p{
     padding-bottom: 5px;
     text-align: left;
     text-shadow: 1px 1px 0 #e8e6e7;
+}
+
+#featured a{
+    text-decoration: none;
+    color: black;
 }
 
 #featured ul li a.link {
