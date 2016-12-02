@@ -457,3 +457,16 @@ div form #search {
     margin-left: 46px;
     width: 286px;
 }
+
+.commentArea {
+    width: 800px;
+    height: 600px;
+    margin-left: 80px;
+    position: relative;
+}
+
+
+#idc-container div.idc-text_noresize,
+#idc-container textarea.idc-text_noresize {
+    margin: 80px -50px 80px auto !important;
+}
