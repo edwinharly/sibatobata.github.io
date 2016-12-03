@@ -110,6 +110,29 @@ h6 {
     background: rgba(245,70,70,0.8);
 }
 
+#github-btn, #facebook-btn, #twitter-btn {
+    color: white;
+}
+
+#panel {
+    display: none;
+}
+
+#github-btn:hover, #facebook-btn:hover, #twitter-btn:hover {
+    color: black;
+    border: 1px solid white;
+}
+
+#github-btn {
+    background-color: grey;
+}
+#facebook-btn {
+    background-color: #498DFF;
+}
+#twitter-btn {
+    background-color: lightskyblue;
+}
+
 #btnTanaman, #btnPenyakit , #btnJenisTanaman , #button{
     width: 250px;
     font-size: 15px;

@@ -67,6 +67,7 @@
                     <li>
                         <a href="./login.html">Masuk</a>
                     </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -88,7 +89,27 @@
                             <h4>SiBatoBata menyajikan berbagai macam tanaman tradisional untuk mengobati berbagai macam penyakit. SiBatoBata juga dapat membantu anda untuk mengenali apa penyakit anda serta tanaman apa yang dapat membantu mengatasi gejala penyakit anda.</h4>
                         </div>
                         <h2>Bergabunglah dengan kami !</h2>
-                        <a href="#" id="mulaiAI" class="btn btn-default btn-lg">MASUK</a>
+                        <a href="#penjelasan" id="mulaiAI" class="btn btn-default btn-lg">MASUK</a><br/>
+                        <div id="panel">
+                            <a href="/auth/github">
+                                <div class="btn" id="github-btn">
+                                    <img src="img/github_32px.png" alt="github logo" />
+                                    <p><strong>LOGIN WITH GITHUB</strong></p>
+                                </div>
+                            </a>
+                            <a href="/auth/facebook" class="btn-facebook">
+                                <div class="btn" id="facebook-btn">
+                                    <img src="img/1480411429_square-facebook.png" alt="facebook logo" />
+                                    <p><strong>LOGIN WITH FACEBOOK</strong></p>
+                                </div>
+                            </a>
+                            <a href="/auth/twitter">
+                                <div class="btn" id="twitter-btn">
+                                    <img src="img/1480411365_twitter.png" alt="twitter logo" />
+                                    <p><strong>LOGIN WITH TWITTER</strong></p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,6 +201,21 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script>
+
+    $(document).ready(function() {
+
+
+        $('#mulaiAI').click(function() {
+            $('#panel').slideDown("slow");
+            
+        });
+    });
+
+    
+
+
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
