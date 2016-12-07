@@ -2,13 +2,14 @@
 
 (function () {
 
-   var bookButton = document.querySelector('.btn-add');
-   var unbookButton = document.querySelector('.btn-delete');
+   var bookButton = document.querySelector('.btn-book');
+   var unbookButton = document.querySelector('.btn-unbook');
    // var clickNbr = document.querySelector('#click-nbr');
-   var apiUrl = appUrl + '/api/:id/clicks';
+   var apiUrl = appUrl + '/api/:id/bookmark';
 
    function updateBookmark (data) {
-      var clicksObject = JSON.parse(data);
+      //var clicksObject = JSON.parse(data);
+
       // clickNbr.innerHTML = clicksObject.clicks;
       // code utk update tampilan sesuai dengan kondisi bookmark/tidak
    }
