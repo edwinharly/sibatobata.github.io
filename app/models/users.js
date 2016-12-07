@@ -24,6 +24,9 @@ var User = new Schema({
         token: String,
         username: String,
         displayName: String
+    },
+    bookmarkedArticles: {
+        id: [] // array ini untuk menampung id artikel apa saja yg telah dibookmark oleh user ini
     }
 
 });
