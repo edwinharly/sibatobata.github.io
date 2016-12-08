@@ -16,14 +16,14 @@ var SBBContent = new Schema({
         deskripsi: String,
         khasiat: [], // array ini untuk menampung penyakit apa saja yg bisa disembuhkan dgn tanaman ini
         budidaya: [], // array ini untuk mengisi langkah-langkah untuk budidaya, 3 langkah berarti 3 item di array ini
-        upvotes: [] // array utk menampung id user yg telah mengupvote
+        upvotes: Number // jumlah upvote
     }
     penyakit: {
         id: String, // id disini kita pakai nama latin dari penyakitnya
         nama: String,
         deskripsi: String,
         obat: [], // array ini untuk menampung tanaman apa yg bs menyembuhkan penyakit ini
-        upvotes: [] // array utk menampung id user yg telah mengupvote
+        upvotes: Number // jumlah upvote
     }
 });
 

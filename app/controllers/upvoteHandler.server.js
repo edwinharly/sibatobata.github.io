@@ -1,6 +1,8 @@
 'use strict';
 
 var Contents = require('../models/contents.js');
+var Users = require('../models/users.js');
+
 
 function UpvoteHandler () {
 
@@ -14,24 +16,24 @@ function UpvoteHandler () {
 			});
 	};
 
-	this.addBookmark = function (req, res) {
+	this.addUpvote = function (req, res) {
 		Contents
-			.findOneAndUpdate({ 'tanaman.id': req./*user*/.tanaman.id }, { $push: { 'bookmarkedArticles.id': articleUrl } })
+			.findOneAndUpdate({ 'tanaman.id': req./*user*/.tanaman.id }, { $inc: { 'tanaman.upvotes': 1 } })
 			.exec(function (err, result) {
 					if (err) { throw err; }
 
-					res.json(result.bookmarkedArticles.id);
+					res.json(result.tanaman);
 				}
 			);
 	};
 
-	this.removeBookmark = function (req, res) {
+	this.removeUpvote = function (req, res) {
 		Contents
-			.findOneAndUpdate({ 'tanaman.id': req./*user*/.tanaman.id }, { $pull: { 'bookmarkedArticles.id': articleUrl } })
+			.findOneAndUpdate({ 'tanaman.id': req./*user*/.tanaman.id }, { $inc: { 'tanaman.upvotes': -1 } })
 			.exec(function (err, result) {
 					if (err) { throw err; }
 
-					res.json(result.bookmarkedArticles.id);
+					res.json(result.tanaman);
 				}
 			);
 	};

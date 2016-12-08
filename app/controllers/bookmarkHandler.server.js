@@ -10,7 +10,7 @@ function BookmarkHandler () {
 			.exec(function (err, result) {
 				if (err) { throw err; }
 
-				res.json(result.bookmarkedArticles.id);
+				res.json(result.bookmarkedArticles);
 			});
 	};
 
@@ -20,7 +20,7 @@ function BookmarkHandler () {
 			.exec(function (err, result) {
 					if (err) { throw err; }
 
-					res.json(result.bookmarkedArticles.id);
+					res.json(result.bookmarkedArticles);
 				}
 			);
 	};
@@ -31,7 +31,7 @@ function BookmarkHandler () {
 			.exec(function (err, result) {
 					if (err) { throw err; }
 
-					res.json(result.bookmarkedArticles.id);
+					res.json(result.bookmarkedArticles);
 				}
 			);
 	};

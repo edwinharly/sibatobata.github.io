@@ -3,6 +3,7 @@
 var path = process.cwd();
 var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
 var BookmarkHandler = require(path + '/app/controllers/bookmarkHandler.server.js');
+var UpvoteHandler = require(path + '/app/controllers/upvoteHandler.server.js')
 
 module.exports = function (app, passport) {
 
@@ -16,6 +17,7 @@ module.exports = function (app, passport) {
 
 	var clickHandler = new ClickHandler();
 	var bookmarkHandler = new BookmarkHandler();
+    var upvoteHandler = new UpvoteHandler();
 
 	app.route('/')
 		.get(isLoggedIn, function (req, res) {
@@ -61,6 +63,11 @@ module.exports = function (app, passport) {
 		.get(isLoggedIn, bookmarkHandler.getBookmarks)
 		.post(isLoggedIn, bookmarkHandler.addBookmark)
 		.delete(isLoggedIn, bookmarkHandler.removeBookmark);
+
+    app.route('/api/:id/upvote')
+        .get(isLoggedIn, upvoteHandler.getUpvotes)
+        .post(isLoggedIn, upvoteHandler.addUpvote)
+        .delete(isLoggedIn, upvoteHandler.removeUpvote);
 
 	// =====================================
     // FACEBOOK ROUTES =====================
