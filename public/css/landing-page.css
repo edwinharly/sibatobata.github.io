@@ -380,7 +380,7 @@ p.copyright {
     text-align: left;
 }
 
-#featured, #bookmarked {
+#featured {
     background: url(../img/bg-featured.gif) repeat-x top center;
     background-size: contain;
     padding: 35px 0 20px 0;
@@ -391,7 +391,7 @@ p.copyright {
     text-align: center;
 }
 
-#featured ul, #bookmarked ul {
+#featured ul {
     color: #545353;
     list-style: none;
     margin: 20px auto;
@@ -400,17 +400,17 @@ p.copyright {
     width: 950px;
 }
 
-#featured ul li.first, #bookmarked ul li.first {
+#featured ul li.first {
     margin-left: 0;
 }
 
-#featured ul li img, #bookmarked ul li img {
+#featured ul li img {
     border: 3px solid #fff;
     width: 281px;
     height: 171px;
 }
 
-#featured ul li span, #bookmarked ul li span {
+#featured ul li span {
     background: url(../img/bg-featured.jpg) no-repeat center;
     display: block;
     height: 15px;
@@ -418,7 +418,7 @@ p.copyright {
     width: 281px;
 }
 
-#featured ul li p, #bookmarked ul li p {
+#featured ul li p {
     line-height: 21px;
     margin-top: 15px;
     padding-bottom: 5px;
@@ -461,7 +461,22 @@ p.copyright {
     width: 38px;
 }
 
-#featured ul li, #bookmarked ul li {
+#featured ul li a.bookmark {
+    background: white;
+    color: orange;
+    display: inline-block;
+    height: 43px;
+    font-family: 'CarterOneRegular';
+    font-size: 16px;
+    line-height: 43px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #216B20;
+    width: 38px;
+}
+
+#featured ul li {
     float: left;
     margin-left: 53px;
     width: 281px;
@@ -530,6 +545,37 @@ p.copyright {
 
 #footer1 div div.pertama {
     margin-left: 0;
+}
+
+#footer1 div div form {
+    height: 40px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+#footer1 div div form label {
+    float: left;
+}
+
+#footer1 div div form input.submit {
+    background: url(../img/sprites-buttons.gif) no-repeat 0 -218px;
+    border: 0;
+    float: left;
+    height: 29px;
+    margin-left: 12px;
+    width: 100px;
+}
+
+#footer1 div div form input#subscribe {
+    background: url(../img/sprites-inputs.gif) no-repeat 0 -131px;
+    border: 0;
+    color: #fffeff;
+    height: 29px;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 29px;
+    padding: 0 5px;
+    width: 160px;
 }
 
 #footer1 div div {
