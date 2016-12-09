@@ -8,7 +8,7 @@ var User = new Schema({
 		id: String,
 		displayName: String,
 		username: String,
-      publicRepos: Number
+        publicRepos: Number
 	},
     nbrClicks: {
       	clicks: Number
@@ -31,7 +31,8 @@ var User = new Schema({
     upvoted: {
         tanaman: [], // array utk menampung id tanaman apa saja yg telah diupvote
         penyakit: [] // array utk menampung id penyakit apa saja yg telah diupvote
-    }
+    },
+
 
 });
 
