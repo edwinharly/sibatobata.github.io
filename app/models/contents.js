@@ -4,15 +4,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var sbbDB = new Schema({
-    user: {
-        twitterId: String,
-        twitterToken: String,
-        twitterUsername: String,
-        twitterDisplayName: String,
-        upvotedTanamanId: String,
-        upvotedPenyakitId: String,
-        bookmarkedArticleId: String
-    },
     article: {
         id: String,
         articleTitle: String,
@@ -27,7 +18,7 @@ var sbbDB = new Schema({
         khasiat: [], // array ini untuk menampung penyakit apa saja yg bisa disembuhkan dgn tanaman ini
         budidaya: [], // array ini untuk mengisi langkah-langkah untuk budidaya, 3 langkah berarti 3 item di array ini
         upvotes: Number // jumlah upvote
-    }
+    },
     penyakit: {
         id: String, // id disini kita pakai nama latin dari penyakitnya
         nama: String,

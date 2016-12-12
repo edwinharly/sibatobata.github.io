@@ -19,40 +19,41 @@ module.exports = function (app, passport) {
 	var bookmarkHandler = new BookmarkHandler();
     var upvoteHandler = new UpvoteHandler();
 
-	app.route('/')
-		.get(isLoggedIn, function (req, res) {
-			res.sendFile(path + '/public/index.html');
-		});
+	app.route('/').get(isLoggedIn, function (req, res) {
+		res.sendFile(path + '/public/index.html');
+	});
 
-	app.route('/login')
-		.get(function (req, res) {
-			res.sendFile(path + '/public/login.html');
-		});
+	app.route('/login').get(function (req, res) {
+		res.sendFile(path + '/public/homepage.html');
+	});
 
-	app.route('/logout')
-		.get(function (req, res) {
-			req.logout();
-			res.redirect('/login');
-		});
+	app.route('/logout').get(function (req, res) {
+		req.logout();
+		res.redirect('/login');
+	});
 
-	app.route('/profile')
-		.get(isLoggedIn, function (req, res) {
-			res.sendFile(path + '/public/profile.html');
-		});
+	app.route('/profile').get(isLoggedIn, function (req, res) {
+		res.sendFile(path + '/public/profile.html');
+	});
 
-	app.route('/api/:id')
-		.get(isLoggedIn, function (req, res) {
-			res.json(req.user.twitter);
-		});
+	app.route('/artikel').get( function(req, res) {
+		res.sendFile(path + '/public/kumpulanartikel.html');
+	});
 
-	app.route('/auth/twitter')
-		.get(passport.authenticate('twitter'));
+	app.route('/api/:id').get(isLoggedIn, function (req, res) {
+		res.json(req.user.twitter);
+	});
 
-	app.route('/auth/twitter/callback')
-		.get(passport.authenticate('twitter', {
-			successRedirect: '/',
-			failureRedirect: '/login'
-		}));
+	app.route('/auth/twitter').get(passport.authenticate('twitter'));
+
+	app.route('/auth/twitter/callback').get(passport.authenticate('twitter', {
+		successRedirect: '/',
+		failureRedirect: '/login'
+	}));
+
+	app.route('/api/tanaman').get(isLoggedIn, function (req, res) {
+		res.json(req.article);
+	});
 
 	app.route('/api/:id/clicks')
 		.get(isLoggedIn, clickHandler.getClicks)

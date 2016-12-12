@@ -9,9 +9,10 @@
 
    function updateBookmark (data) {
       //var clicksObject = JSON.parse(data);
-
       // clickNbr.innerHTML = clicksObject.clicks;
       // code utk update tampilan sesuai dengan kondisi bookmark/tidak
+      
+
    }
 
    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark));
