@@ -253,3 +253,6 @@ paket-files/
 
 # NodeJS modules
 node_modules/
+
+.png
+.rar
