@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beranda - Si Bato Bata</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/public/css/landing-page.css" rel="stylesheet">
+    <link href="/public/css/magic-check.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    
+    <script src="/app/controllers/listArtikel.client.js"></script>
+
+    <script>
+
+    </script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav merek" id="judulkecil" href="./index.html">Si Bato Bata</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">Nama User</a>
+                    </li>
+                    <li>
+                        <a href="./homepage.html">Keluar</a>
+                    </li>
+                </ul>
+                <form id="frmSearch" action="">
+                    <input name="search" id="search" value="" type="text">
+                    <input name="searchBtn" id="searchBtn" value="" type="submit">
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h2>About Us</h2>
+                        <hr class="intro-divider">
+                        <div id="featured" >
+                            <ul id="ulArtikel">
+                                <li class="first">
+                                    <a href="#">
+                                        <img id="berita-gambar-1" src="img/edwin.jpg" alt="8 Jenis Jamur dan Khasiatnya Bagi Tubuh">
+                                    </a>
+                                    <span></span>
+                                    <p>8 Jenis jamur dan khasiatnya bagi tubuh.<br/>Merdeka.com - Ada begitu banyak jenis jamur yang menawarkan manfaat kesehatan. Pada dasarnya, jamur bukan sebuah tanaman atau binatang . . .</p>
+                                    <a class="link" href="#" onclick="showArtikel('https://www.merdeka.com/sehat/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.html')">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img id="berita-gambar-2" src="img/agus.jpg" alt="5 Alasan Untuk Mulai Menggosok Gigi Dengan Minyak Kelapa">
+                                    </a>
+                                    <span></span>
+                                    <p>5 Alasan untuk mulai menggosok gigi dengan minyak kelapa.<br/>Merdeka.com - Umumnya, kamu pasti akan menggosok gigi dengan pasta gigi yang dijual secara bebas. Sebabnya pasta gigi kaya . . .</p>
+                                    <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img id="berita-gambar-3" src="img/kunyah-pinang-kebiasaan-tradisional-indonesia-pencegah-kanker.jpg" alt="Kunyah Pinang Kebiasaan Tradisional Indonesia Pencegah Kanker">
+                                    </a>
+                                    <span></span>
+                                    <p>Kunyah pinang, kebiasaan tradisional Indonesia pencegah kanker.<br/>Merdeka.com - Indonesia merupakan negara yang memiliki banyak tradisi kuno yang ajaibnya bermanfaat . . .</p>
+                                    <a class="link" href="#">Baca</a>
+                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+    <!-- Footer -->
+    <div id="footer1">
+        <div>
+            <div class="pertama">
+                <h2 id="judul" class="merek">Si Bato Bata</h2>
+                <p>Untuk Informasi lebih lanjut. Silahkan hubungi kami.</p>
+                <p>Telephone. : <span>12345678-90</span></p>
+                <p>Fax : <span>23456789-01</span></p>
+                <p>Email : <span>sibatobata@gmail.com</span></p>
+            </div>
+            <div>
+                <h3>Get Social with us!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat eleifend arcu, sit amet rutrum lectus lobortis quis. Donec aliquam</p> 
+            </div>
+            <div>
+                <h3>Share your thoughts!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat eleifend arcu, sit amet rutrum lectus lobortis quis. Donecaliquam</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Beranda</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">Artikel</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Kontak</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Tentang</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Layanan</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; SiBatoBata 2016. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="/public/js/jquery.js"></script>
+    
+    <script>
+        function showArtikel(url) {
+            var src = url;
+            $.modal('<iframe src="' + src + '" height="450" width="1200" style="border:0">', {
+                closeHTML:"",
+                containerCss:{
+                    backgroundColor:"#fff", 
+                    borderColor:"#fff",
+                    height:450, 
+                    padding:0, 
+                    width:1200,
+                    marginTop: "60px"
+                },
+                overlayClose:true
+            });
+        }
+        
+    </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/jquery.simplemodal-1.4.4.js"></script>
+
+    
+</body>
+
+</html>
