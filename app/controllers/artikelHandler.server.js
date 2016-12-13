@@ -9,6 +9,7 @@ function ArticleHandler() {
             if (err) { throw err; }
 			res.json(result);
         });
+        
     };
 }
 

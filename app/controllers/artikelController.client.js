@@ -15,7 +15,7 @@
 
     ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, function (data) {
         var articleObject = JSON.parse(data);
-
+        // update elemen html dibawah
         
 
     }));
