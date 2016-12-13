@@ -3,7 +3,8 @@
 var path = process.cwd();
 var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
 var BookmarkHandler = require(path + '/app/controllers/bookmarkHandler.server.js');
-var UpvoteHandler = require(path + '/app/controllers/upvoteHandler.server.js')
+var UpvoteHandler = require(path + '/app/controllers/upvoteHandler.server.js');
+var ArticleHandler = require(path + '/app/controllers/article')
 
 module.exports = function (app, passport) {
 
