@@ -1,14 +1,14 @@
 'use strict';
 
-var SbbDB = require('../models/contents.js');
+var Tanaman = require('../models/tanaman.js');
 //var Users = require('../models/users.js');
 
 
 function UpvoteHandler () {
 
 	this.getUpvotes = function (req, res) {
-		SbbDB
-			.findOne({ 'tanaman.id': req.sbbDB.tanaman.id }, { '_id': false })
+		Tanaman
+			.findOne({ 'nama': req.tanaman.nama }, { '_id': false })
 			.exec(function (err, result) {
 				if (err) { throw err; }
 
@@ -17,9 +17,9 @@ function UpvoteHandler () {
 	};
 
 	this.addUpvote = function (req, res) {
-		SbbDB
-			.findOneAndUpdate({ 'tanaman.id': req.sbbDB.tanaman.id }, { $inc: { 'tanaman.upvotes': 1 } })
-			.findOneAndUpdate({ 'user.twitterId': req.sbbDB.user.twitterId}, { $push: { 'user.upvotedTanamanId': req.sbbDB.tanaman.id} })
+		Tanaman
+			.findOneAndUpdate({ 'nama': req.tanaman.nama }, { $inc: { 'tanaman.upvotes': 1 } })
+			.findOneAndUpdate({ 'users.twitter.id': req.users.twitter.id}, { $push: { 'users.upvoted.tanaman': req.tanaman.nama} })
 			.exec(function (err, result) {
 					if (err) { throw err; }
 
@@ -29,9 +29,9 @@ function UpvoteHandler () {
 	};
 
 	this.removeUpvote = function (req, res) {
-		SbbDB
-			.findOneAndUpdate({ 'tanaman.id': req.sbbDB.tanaman.id }, { $inc: { 'tanaman.upvotes': -1 } })
-			.findOneAndUpdate({ 'user.twitterId': req.sbbDB.user.twitterId}, { $pull: { 'user.upvotedTanamanId': req.sbbDB.tanaman.id} })
+		Tanaman
+			.findOneAndUpdate({ 'nama': req.tanaman.nama }, { $inc: { 'tanaman.upvotes': -1 } })
+			.findOneAndUpdate({ 'users.twitter.id': req.users.twitter.id}, { $pull: { 'users.upvoted.tanaman': req.tanaman.nama} })
 			.exec(function (err, result) {
 					if (err) { throw err; }
 
