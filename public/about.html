@@ -11,18 +11,36 @@
 
     <title>Beranda - Si Bato Bata</title>
 
+    <!-- ini untu di luar node server.js -->
     <!-- Bootstrap Core CSS -->
-    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/magic-check.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <!-- ################################################################################ -->
+
+
+    <!-- bagian ini untuk dibuka pake node server.js
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+
     <link href="/public/css/landing-page.css" rel="stylesheet">
     <link href="/public/css/magic-check.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
+    
     <link href="/public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+
+    ############################################################## -->
+    
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    
+
     <script src="/app/controllers/listArtikel.client.js"></script>
 
     <script>
@@ -84,34 +102,22 @@
                     <div class="intro-message">
                         <h2>About Us</h2>
                         <hr class="intro-divider">
-                        <div id="featured" >
-                            <ul id="ulArtikel">
+                        <div id="featured1" >
+                            <ul>
                                 <li class="first">
-                                    <a href="#">
-                                        <img id="berita-gambar-1" src="img/edwin.jpg" alt="8 Jenis Jamur dan Khasiatnya Bagi Tubuh">
-                                    </a>
+                                    <img src="img/edwin.jpg">
                                     <span></span>
-                                    <p>8 Jenis jamur dan khasiatnya bagi tubuh.<br/>Merdeka.com - Ada begitu banyak jenis jamur yang menawarkan manfaat kesehatan. Pada dasarnya, jamur bukan sebuah tanaman atau binatang . . .</p>
-                                    <a class="link" href="#" onclick="showArtikel('https://www.merdeka.com/sehat/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.html')">Baca</a>
-                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                                    <p>Nama : Edwin Harly<br/>Posisi : Ketua<br/>Email : 141111014@students.mikroskil.ac.id</p>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <img id="berita-gambar-2" src="img/agus.jpg" alt="5 Alasan Untuk Mulai Menggosok Gigi Dengan Minyak Kelapa">
-                                    </a>
+                                    <img src="img/agus.jpg">
                                     <span></span>
-                                    <p>5 Alasan untuk mulai menggosok gigi dengan minyak kelapa.<br/>Merdeka.com - Umumnya, kamu pasti akan menggosok gigi dengan pasta gigi yang dijual secara bebas. Sebabnya pasta gigi kaya . . .</p>
-                                    <a class="link" href="#">Baca</a>
-                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                                    <p>Nama : Agus Manto<br/>Posisi : Anggota<br/>Email : 141110019@students.mikroskil.ac.id</p>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <img id="berita-gambar-3" src="img/kunyah-pinang-kebiasaan-tradisional-indonesia-pencegah-kanker.jpg" alt="Kunyah Pinang Kebiasaan Tradisional Indonesia Pencegah Kanker">
-                                    </a>
+                                    <img src="img/gendola.jpg">
                                     <span></span>
-                                    <p>Kunyah pinang, kebiasaan tradisional Indonesia pencegah kanker.<br/>Merdeka.com - Indonesia merupakan negara yang memiliki banyak tradisi kuno yang ajaibnya bermanfaat . . .</p>
-                                    <a class="link" href="#">Baca</a>
-                                    <a class="book" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                                    <p>Nama : Boris Kumara<br/>Posisi : Anggota<br/>Email : 141110060@students.mikroskil.ac.id</p>
                                 </li>
                             </ul>
                         </div>
@@ -135,12 +141,16 @@
                 <p>Email : <span>sibatobata@gmail.com</span></p>
             </div>
             <div>
-                <h3>Get Social with us!</h3>
+                <h3>Follow Us ! ! !</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat eleifend arcu, sit amet rutrum lectus lobortis quis. Donec aliquam</p> 
             </div>
             <div>
-                <h3>Share your thoughts!</h3>
+                <h3>Please Leave Us Your Email</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat eleifend arcu, sit amet rutrum lectus lobortis quis. Donecaliquam</p>
+                <form action="#">
+                    <label for="subscribe"><input id="subscribe" maxlength="30" value="email address" type="text"></label>
+                    <input class="submit" value="" type="submit">
+                </form>
             </div>
         </div>
     </div>
