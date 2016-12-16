@@ -634,6 +634,19 @@ p.copyright {
     width: 286px;
 }
 
+#footer1 div div div#logo1{
+    width: 80px;
+    height: 55px;
+    margin-left: -20px;
+}
+
+#footer1 div div div#logo2{
+    width: 55px;
+    height: 55px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
 .commentArea {
     width: 800px;
     position: block;
