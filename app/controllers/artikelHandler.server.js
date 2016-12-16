@@ -5,7 +5,6 @@
 
 var mongodb = require('mongodb');
 var mongoclient = mongodb.MongoClient;
-var assert = require('assert');
 var url = 'mongodb://localhost:27017/sbbDB';
 
 
@@ -14,6 +13,7 @@ function ArticleHandler() {
     this.getArticles = function (req, res) {
         Article.find().exec( function (err, result) {
             if (err) { throw err; }
+            console.log(result);
 			res.json(result);
         });
         
@@ -22,7 +22,7 @@ function ArticleHandler() {
 
     
     this.getArticles = function (req, res) {
-
+        
         mongoclient.connect(url, function (err, db) {
             /*
             if (err) {
@@ -41,18 +41,23 @@ function ArticleHandler() {
                     }
                     db.close();
                 })
-            } */
+            }
+            */
             var collection = db.collection('article');
             collection.find().toArray(function (err, result) {
+                console.log(result);
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log(result);
-                    res.json(JSON.stringify(result));
+                    //console.log(result);
+                    //console.log(req);
+                    res.json(result);
                 }
+                
+            
                 db.close();
             })
-
+            
         })
     }
     

@@ -10,19 +10,21 @@
     var ulArtikel = document.getElementById('ulArtikel');
 
     //var apiUrl = appUrl + 'api/:id/artikel';
-    var apiUrl = 'http://localhost:8080/api/:id/artikel';
+    var apiUrl = appUrl + '/api/:id/artikel';
 
-    
-    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, function (data) {
-        
-        var articleObject = JSON.parse(data);
-        // update elemen html dibawah
-        console.log(articleObject[0].title);
-        for (var i=0; i<articleObject.length; i++) {
-            var li = document.createElement('li');
-            var node = document.createTextNode(articleObject[i].title);
+    function updateArticles (data) {
+        var dbResult = JSON.parse(data);
+        //update elemen html dibawah
+        console.log(dbResult);
+        for (var i=0; i<dbResult.length; i++) {
+            console.log(dbResult[i]);
+            var li = document.createElement('li');  
+            var node = document.createTextNode(dbResult[i].title);
             li.appendChild(node);
             ulArtikel.appendChild(li);
         }
-    }));
+    }
+    //console.log();
+    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateArticles));
+
 })();
