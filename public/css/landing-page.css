@@ -50,7 +50,8 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/Jamu-Tradisional.jpg) no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/Jamu-Tradisional.jpg) center center;
+    background-repeat: repeat-y;
     background-size: cover;
     display: block;
     position: relative;
@@ -60,7 +61,8 @@ h6 {
     padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     text-align: center;
     color: #f8f8f8;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/Jamu-Tradisional.jpg) no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/Jamu-Tradisional.jpg) center center;
+    background-repeat: repeat-y;
     background-size: cover;
     display: block;
     position: relative;

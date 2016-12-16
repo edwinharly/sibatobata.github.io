@@ -38,8 +38,9 @@ module.exports = function (app, passport) {
 		res.sendFile(path + '/public/profile.html');
 	});
 
-	app.route('/artikel').get( function(req, res) {
+	app.route('/artikel').get(isLoggedIn, function(req, res) {
 		res.sendFile(path + '/public/kumpulanartikel.html');
+		
 	});
 
 	app.route('/api/:id').get(isLoggedIn, function (req, res) {

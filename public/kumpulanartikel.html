@@ -23,11 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     
-    <script src="/app/controllers/listArtikel.client.js"></script>
 
-    <script>
-
-    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,7 +53,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">Nama User</a>
+                        <a id="display-name" href="#about">Nama User</a>
                     </li>
                     <li>
                         <a href="./homepage.html">Keluar</a>
@@ -216,7 +212,8 @@
     <script src="/public/js/bootstrap.min.js"></script>
     <script src="/public/js/jquery.simplemodal-1.4.4.js"></script>
 
-    
+    <script type="text/javascript" src="common/ajax-functions.js"></script>
+    <script type="text/javascript" src="controllers/artikelController.client.js"></script>
 </body>
 
 </html>
