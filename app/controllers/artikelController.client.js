@@ -11,20 +11,60 @@
 
     //var apiUrl = appUrl + 'api/:id/artikel';
     var apiUrl = appUrl + '/api/:id/artikel';
+    var apiUrlUser = appUrl + '/api/:id/';
 
     function updateArticles (data) {
         var dbResult = JSON.parse(data);
         //update elemen html dibawah
-        console.log(dbResult);
+        
         for (var i=0; i<dbResult.length; i++) {
-            console.log(dbResult[i]);
-            var li = document.createElement('li');  
-            var node = document.createTextNode(dbResult[i].title);
-            li.appendChild(node);
+            var li = document.createElement('li');
+            if (i%3==0){
+                li.setAttribute('class', 'first');
+            }
+
+            var aImg = document.createElement('a');
+            aImg.setAttribute('href', '#');
+            
+            var img = document.createElement('img');
+            img.setAttribute('src', dbResult[i].imgSrc);
+
+            var pTitle = document.createElement('p');
+            var pNode = document.createTextNode(dbResult[i].title + '\n' + dbResult[i].headline);
+            pTitle.appendChild(pNode);
+
+            var aLink = document.createElement('a');
+            aLink.setAttribute('class', 'link');
+            aLink.setAttribute('href', '#');
+            aLink.setAttribute('onclick', dbResult[i].url);
+            var aLinkNode = document.createTextNode('Baca'); 
+
+            var aBook = document.createElement('a');
+            aBook.setAttribute('class', 'book');
+            aBook.setAttribute('href', '#');
+            var iBook = document.createElement('i');
+            iBook.setAttribute('class', 'fa fa-bookmark');
+            iBook.setAttribute('aria-hidden', 'true');
+
+            var span = document.createElement('span');
+
+            aLink.appendChild(aLinkNode);
+            aBook.appendChild(iBook);
+            aImg.appendChild(img);
+
+            li.appendChild(aImg); li.appendChild(span); li.appendChild(pTitle); li.appendChild(aLink); li.appendChild(aBook);
             ulArtikel.appendChild(li);
         }
     }
-    //console.log();
+    
     ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateArticles));
+
+    document.addEventListener('DOMContentLoaded', function() {
+        ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrlUser, function(data) {
+            var userObject = JSON.parse(data);
+            var username = document.getElementById('display-name');
+            username.innerHTML = userObject['displayName'];
+        })
+    )});
 
 })();
