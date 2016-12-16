@@ -21,6 +21,7 @@
          updateHtmlElement(userObject, displayName, 'username');
       }
 
+      /*
       if (profileId !== null) {
          updateHtmlElement(userObject, profileId, 'id');   
       }
@@ -32,6 +33,7 @@
       if (profileRepos !== null) {
          updateHtmlElement(userObject, profileRepos, 'publicRepos');   
       }
+      */
 
    }));
 })();

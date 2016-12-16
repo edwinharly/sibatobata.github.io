@@ -7,21 +7,21 @@
     var profileRepos = document.querySelector('#profile-repos') || null;
     var displayName = document.querySelector('#display-name');
     */
-    var apiUrl = appUrl + '/api/artikel';
     var ulArtikel = document.getElementById('ulArtikel');
+
+    var apiUrl = 'http://localhost:8080/api/:id/artikel';
+
 
     ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, function (data) {
         var articleObject = JSON.parse(data);
         // update elemen html dibawah
-        var headline;
+        console.log(articleObject);
         for (var i=0; i<articleObject.length; i++) {
-            headline = articleObject[i].headline;
-            var p = document.createElement('p');
-            var node = document.createTextNode(headline);
-            p.appendChild(node);
-            ulArtikel.appendChild(p);
+            var li = document.createElement('li');
+            var node = document.createTextNode(articleObject[i].title);
+            li.appendChild(node);
+            ul.appendChild(li);
         }
-
 
     }));
 })();

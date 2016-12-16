@@ -28,6 +28,7 @@
     "express": "^4.12.4",
     "express-session": "^1.11.3",
     "jquery-colorbox": "^1.6.4",
+    "mongodb": "^2.2.16",
     "mongoose": "^4.1.0",
     "mysql": "github:mysqljs/mysql",
     "passport": "^0.3.0",
