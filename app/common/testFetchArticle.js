@@ -8,7 +8,7 @@ mongoclient.connect(url, function (err, db) {
     } else {
         console.log('connection established');
         var collection = db.collection('article');
-        collection.find({}).toArray(function (err, result) {
+        collection.find({}, {"_id": false}).toArray(function (err, result) {
             if (err) {
                 console.log(err);
             } else if (result.length) {

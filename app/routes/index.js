@@ -40,7 +40,7 @@ module.exports = function (app, passport) {
 
 	app.route('/artikel').get( function(req, res) {
 		res.sendFile(path + '/public/kumpulanartikel.html');
-		res.send(path + '/app/common/testFetchArticle.js');
+		
 	});
 
 	app.route('/api/:id').get(isLoggedIn, function (req, res) {

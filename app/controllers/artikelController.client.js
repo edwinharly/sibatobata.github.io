@@ -9,19 +9,20 @@
     */
     var ulArtikel = document.getElementById('ulArtikel');
 
+    //var apiUrl = appUrl + 'api/:id/artikel';
     var apiUrl = 'http://localhost:8080/api/:id/artikel';
 
-
+    
     ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, function (data) {
+        
         var articleObject = JSON.parse(data);
         // update elemen html dibawah
-        console.log(articleObject);
+        console.log(articleObject[0].title);
         for (var i=0; i<articleObject.length; i++) {
             var li = document.createElement('li');
             var node = document.createTextNode(articleObject[i].title);
             li.appendChild(node);
-            ul.appendChild(li);
+            ulArtikel.appendChild(li);
         }
-
     }));
 })();
