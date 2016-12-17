@@ -36,7 +36,7 @@
             var aLink = document.createElement('a');
             aLink.setAttribute('class', 'link');
             aLink.setAttribute('href', '#');
-            aLink.setAttribute('onclick', dbResult[i].url);
+            aLink.setAttribute('onclick', 'showArtikel(\'' + dbResult[i].url + '\')');
             var aLinkNode = document.createTextNode('Baca'); 
 
             var aBook = document.createElement('a');
