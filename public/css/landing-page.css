@@ -564,6 +564,21 @@ p.copyright {
     width: 230px;
 }
 
+#ulPenyakit {
+    padding: 10px;
+    margin: 10px auto;
+    border: solid white 2px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
+    width: 300px;
+}
+
+#ulPenyakit li a {
+    font-size: 12px;
+    line-height: 6px;
+    width: 230px;
+}
+
 
 #frmSearch {
     float: right;
