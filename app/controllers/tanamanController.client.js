@@ -21,13 +21,13 @@
 
         for (var i=0; i<dbResult.length; i++) {
             var li = document.createElement('li');
+            li.setAttribute('id', dbResult[i]._id);
 
             var aTanaman = document.createElement('a');
-            aTanaman.setAttribute('id', dbResult[i]._id);
             aTanaman.setAttribute('class', 'btn btn-default btn-lg');
             aTanaman.setAttribute('href', '#');
 
-            var node = document.createTextNode(dbResult[i].nama);
+            var node = document.createTextNode(dbResult[i].nama + ' (' + dbResult[i].upvotes + ' poin)');
             aTanaman.appendChild(node);
             li.appendChild(aTanaman);
             ulTanaman.appendChild(li);
