@@ -5,6 +5,7 @@ var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
 var BookmarkHandler = require(path + '/app/controllers/bookmarkHandler.server.js');
 var UpvoteHandler = require(path + '/app/controllers/upvoteHandler.server.js');
 var ArticleHandler = require(path + '/app/controllers/artikelHandler.server.js');
+var TanamanHandler = require(path + '/app/controllers/tanamanHandler.server.js');
 
 module.exports = function (app, passport) {
 
@@ -20,6 +21,7 @@ module.exports = function (app, passport) {
 	var bookmarkHandler = new BookmarkHandler();
     var upvoteHandler = new UpvoteHandler();
     var articleHandler = new ArticleHandler();
+	var tanamanHandler = new TanamanHandler();
 
 	app.route('/').get(isLoggedIn, function (req, res) {
 		res.sendFile(path + '/public/index.html');
@@ -55,7 +57,7 @@ module.exports = function (app, passport) {
 	}));
 
 	app.route('/api/:id/tanaman')
-		.get(isLoggedIn);
+		.get(isLoggedIn, tanamanHandler.getTanaman);
 
 	app.route('/api/:id/artikel')
 		.get(isLoggedIn, articleHandler.getArticles);
