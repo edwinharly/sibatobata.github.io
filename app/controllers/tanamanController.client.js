@@ -76,6 +76,14 @@
 
 
     //event-event
+    document.addEventListener('DOMContentLoaded', function() {
+        ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrlUser, function(data) {
+            var userObject = JSON.parse(data);
+            var username = document.getElementById('display-name');
+            username.innerHTML = userObject['displayName'];
+        }));
+    });
+
     var btnSortAsc = document.getElementById('btnSortAsc');
     btnSortAsc.addEventListener('click', function () {
         sortAscending();
