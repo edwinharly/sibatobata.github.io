@@ -19,6 +19,7 @@
         
         for (var i=0; i<dbResult.length; i++) {
             var li = document.createElement('li');
+            li.setAttribute('id', dbResult._id);
             if (i%3==0){
                 li.setAttribute('class', 'first');
             }
@@ -36,7 +37,7 @@
             var aLink = document.createElement('a');
             aLink.setAttribute('class', 'link');
             aLink.setAttribute('href', '#');
-            aLink.setAttribute('onclick', dbResult[i].url);
+            aLink.setAttribute('onclick', 'showArtikel(\'' + dbResult[i].url + '\')');
             var aLinkNode = document.createTextNode('Baca'); 
 
             var aBook = document.createElement('a');
@@ -64,7 +65,18 @@
             var userObject = JSON.parse(data);
             var username = document.getElementById('display-name');
             username.innerHTML = userObject['displayName'];
+        }));
+    });
+
+    var bookBtns = document.getElementsByClassName('book');
+    for (var i=0; i<bookBtns.length; i++) {
+        bookBtns[i].addEventListener('click', function() {
+            var artikelLi = bookBtns[i].parentNode;
+            ajaxFunctions.ready(ajaxFunctions.ajaxRequest('POST', apiBookmark, function () {
+                
+            }));
         })
-    )});
+    }
+
 
 })();
