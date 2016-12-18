@@ -24,5 +24,8 @@ var ajaxFunctions = {
 
       xmlhttp.open(method, url, true);
       xmlhttp.send();
+   },
+   ajaxRequestParam: function ajaxRequest (method, url, param, callback) {
+       
    }
 };
