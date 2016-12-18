@@ -6,6 +6,7 @@ var BookmarkHandler = require(path + '/app/controllers/bookmarkHandler.server.js
 var UpvoteHandler = require(path + '/app/controllers/upvoteHandler.server.js');
 var ArticleHandler = require(path + '/app/controllers/artikelHandler.server.js');
 var TanamanHandler = require(path + '/app/controllers/tanamanHandler.server.js');
+var PenyakitHandler = require(path + '/app/controllers/penyakitHandler.server.js');
 
 module.exports = function (app, passport) {
 
@@ -22,6 +23,7 @@ module.exports = function (app, passport) {
     var upvoteHandler = new UpvoteHandler();
     var articleHandler = new ArticleHandler();
 	var tanamanHandler = new TanamanHandler();
+	var penyakitHandler = new PenyakitHandler();
 
 	app.route('/').get(isLoggedIn, function (req, res) {
 		res.sendFile(path + '/public/index.html');
@@ -48,6 +50,10 @@ module.exports = function (app, passport) {
 		res.sendFile(path + '/public/daftartanaman.html');
 	});
 
+	app.route('/penyakit').get(isLoggedIn, function(req, res) {
+		res.sendFile(path + '/public/daftarpenyakit.html');
+	});
+
 	app.route('/about').get(function(req, res) {
 		res.sendFile(path + '/public/about.html');
 	});
@@ -65,6 +71,9 @@ module.exports = function (app, passport) {
 
 	app.route('/api/:id/tanaman')
 		.get(isLoggedIn, tanamanHandler.getTanaman);
+
+	app.route('/api/:id/penyakit')
+		.get(isLoggedIn, penyakitHandler.getPenyakit);
 
 	app.route('/api/:id/artikel')
 		.get(isLoggedIn, articleHandler.getArticles);
