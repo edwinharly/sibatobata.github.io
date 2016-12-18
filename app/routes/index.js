@@ -48,6 +48,10 @@ module.exports = function (app, passport) {
 		res.sendFile(path + '/public/daftartanaman.html');
 	});
 
+	app.route('/about').get(function(req, res) {
+		res.sendFile(path + '/public/about.html');
+	});
+
 	app.route('/api/:id').get(isLoggedIn, function (req, res) {
 		res.json(req.user.twitter);
 	});
