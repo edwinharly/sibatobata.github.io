@@ -79,9 +79,9 @@
                         <h2>Daftar Tanaman Obat</h2>
                         <hr class="intro-divider">
                         <div id="listContainer">
-                            <i class="btn btnSort fa fa-sort-alpha-asc" aria-hidden="true"></i>
-                            <i class="btn btnSort fa fa-sort-alpha-desc" aria-hidden="true"></i>
-                            <i class="btn btn-danger fa fa-fire" aria-hidden="true"></i>
+                            <i id="btnSortAsc" class="btn btnSort fa fa-sort-alpha-asc" aria-hidden="true"></i>
+                            <i id="btnSortDsc" class="btn btnSort fa fa-sort-alpha-desc" aria-hidden="true"></i>
+                            <i id="btnSortUpv" class="btn btn-danger fa fa-fire" aria-hidden="true"></i>
                             
                             <ul id="ulTanaman" class="btnList">
                                 
@@ -173,8 +173,8 @@
     <script src="/public/js/bootstrap.min.js"></script>
 
     <!-- Javascript -->
-    <script src="common/sort-ascending.js"></script>
-    <script src="controllers/tanamanController.client.js"
+    <script type="text/javascript" src="common/ajax-functions.js"></script>
+    <script type="text/javascript" src="controllers/tanamanController.client.js"></script>
 
 </body>
 

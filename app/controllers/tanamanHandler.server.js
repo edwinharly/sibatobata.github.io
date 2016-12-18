@@ -9,7 +9,7 @@ function TanamanHandler() {
         mongoclient.connect(url, function (err, db) {
             var collection = db.collection('tanaman');
             collection.find().toArray(function (err, result) {
-                console.log(result);
+                //console.log(result);
                 if (err) {
                     console.log(err);
                 } else {

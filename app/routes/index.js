@@ -42,7 +42,10 @@ module.exports = function (app, passport) {
 
 	app.route('/artikel').get(isLoggedIn, function(req, res) {
 		res.sendFile(path + '/public/kumpulanartikel.html');
-		
+	});
+
+	app.route('/tanaman').get(isLoggedIn, function(req, res) {
+		res.sendFile(path + '/public/daftartanaman.html');
 	});
 
 	app.route('/api/:id').get(isLoggedIn, function (req, res) {
