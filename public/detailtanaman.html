@@ -45,16 +45,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav merek" id="judulkecil" href="./index.html">Si Bato Bata</a>
+                <a class="navbar-brand topnav merek" id="judulkecil" href="/">Si Bato Bata</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">Nama User</a>
+                        <a id="display-name" href="#about">Nama User</a>
                     </li>
                     <li>
-                        <a href="./homepage.html">Keluar</a>
+                        <a href="/logout">Keluar</a>
                     </li>
                 </ul>
                 <form id="frmSearch" action="">
@@ -77,9 +77,9 @@
                     <div class="detailContainer">
                         <h2>Informasi Tanaman</h2>
                         <hr class="intro-divider">
-                        <img src="img/gendola.jpg" alt="" class="gambar">
+                        <img src="" alt="" class="gambar">
                         <div class="extraContainer">
-                            <h3>Gendola</h3>
+                            <h3 id="namaTanaman">Gendola</h3>
                             <p id="a">Nama Latin: #######</p>
                             <p>AAKAKAKAKA KAKAKKAK ALDKDMKWBF AAKAKAK AKAKAKAK KAKALDKDMKWBF AAKAKAKA KAKAKAKK AKALDKDMKWBF AAKAKAKAK AKAKAKKA KALDKDMKWBF AAKAK AKAKAK AKAKKAKAL DKDMKWBF AAKAKAKAK AKAKAKKAKA LDKDMKWBF AAKAKAKAK AKAKAKKAK ALDKDMKWBF AAKAKAKA KAKAKAKKA KALDKDMKWBF</p>
                         </div>
@@ -124,13 +124,13 @@
             <div>
                 <h3>Follow Us ! ! !</h3><br/>
                 <div id="logo1">
-                    <img src="img/fb.png">
+                    <img src="/public/img/fb.png">
                 </div>
                 <div id="logo2">
-                    <img src="img/twitter.png">
+                    <img src="/public/img/twitter.png">
                 </div>
                 <div id="logo2">
-                    <img src="img/ig.jpg">
+                    <img src="/public/img/ig.jpg">
                 </div>
             </div>
             <div>
@@ -149,6 +149,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    <!--
                     <ul class="list-inline">
                         <li>
                             <a href="#">Beranda</a>
@@ -170,6 +171,7 @@
                             <a href="#services">Layanan</a>
                         </li>
                     </ul>
+                    -->
                     <p class="copyright text-muted small">Copyright &copy; SiBatoBata 2016. All Rights Reserved</p>
                 </div>
             </div>
@@ -183,6 +185,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/public/js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="common/ajax-functions.js"></script>
+    <script type="text/javascript" src="controllers/detailtanamanController.client.js"></script>
 
 </body>
 

@@ -25,7 +25,7 @@
 
             var aTanaman = document.createElement('a');
             aTanaman.setAttribute('class', 'btn btn-default btn-lg');
-            aTanaman.setAttribute('href', '#');
+            aTanaman.setAttribute('href', '/detailtanaman');
 
             var node = document.createTextNode(dbResult[i].nama + ' (' + dbResult[i].upvotes + ' poin)');
             aTanaman.appendChild(node);

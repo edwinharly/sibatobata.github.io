@@ -4,13 +4,15 @@ var mongodb = require('mongodb');
 var mongoclient = mongodb.MongoClient;
 var url = 'mongodb://localhost:27017/sbbDB';
 
-function TanamanHandler() {
-    this.getTanaman = function (req, res) {
-        console.log(req.params.id);
+function DetailTanamanHandler() {
+    this.getDetailtanaman = function (req, res) {
         mongoclient.connect(url, function (err, db) {
             var collection = db.collection('tanaman');
-            collection.find().toArray(function (err, result) {
-                //console.log(result);
+            var tanamanid = req.params.tanamanid;
+            console.log('diatas tanamanid');
+            console.log(tanamanid);
+            collection.findOne({"_id": tanamanid}, function (err, result) {
+                console.log(result);
                 if (err) {
                     console.log(err);
                 } else {
@@ -22,6 +24,8 @@ function TanamanHandler() {
                 db.close();
             });
         });
-    };
+
+    }
 }
-module.exports = TanamanHandler;
+
+module.exports = DetailTanamanHandler;
