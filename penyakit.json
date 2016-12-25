@@ -1,6 +1,63 @@
-{
-	"nama":"",
-	"namaMedis":"",
-	"gejala":"",
-	"pengobatan":""
-}
+[
+	{
+		"nama":"Diabetes",
+		"namaMedis":"Diabetes melitus",
+		"gejala":["Haus","Penurunan berat badan","Luka tidak sembuh-sembuh"],
+		"pengobatan":["Alpukat","Bambu Tali"]
+	},
+	{
+		"nama":"Anyang-Anyangan",
+		"namaMedis":"Cystitis",
+		"gejala":["Rasa sakit saat buang air kecil","Sakit di bagian bawah perut","Tidak ada air kencing saat ingin buang air kecil"],
+		"pengobatan":["Anyang-Anyang"]
+	},
+	{
+		"nama":"Obesitas",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	{
+		"nama":"",
+		"namaMedis":"",
+		"gejala":"",
+		"pengobatan":""
+	},
+	
+]
