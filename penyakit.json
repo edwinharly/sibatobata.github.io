@@ -12,40 +12,40 @@
 		"pengobatan":["Anyang-Anyang"]
 	},
 	{
-		"nama":"Obesitas",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"Kegemukan",
+		"namaMedis":"Obesitas",
+		"gejala":["Depresi","Sulit tidur","Nyeri punggung","Sulit bernafas","Sering ngantuk","Keringat berlebihan"],
+		"pengobatan":["Bangle / Bengle"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"TBC Kelenjar",
+		"namaMedis":"Scrofula",
+		"gejala":["Muncul benjolan tanpa rasa sakit","Nafsu makan berkurang","Demam","Menggigil"],
+		"pengobatan":["Bayam Duri"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"Tuberkulosis",
+		"namaMedis":"Tuberculosis",
+		"gejala":["Keringat malam","Batuk-batuk","Batuk berdarah","Sulit bernafas","Nyeri dada","Nafsu makan berkurang"],
+		"pengobatan":["Bambu Tali"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"Penyakit Kuning",
+		"namaMedis":"Icterus",
+		"gejala":["Gatal-gatal","Nyeri perut","Nyeri sendi","Kulit kuning","Nafsu makan berkurang","Rambut rontok"],
+		"pengobatan":["Bangle/ Bengle"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"Radang Usus",
+		"namaMedis":"Appendix vermiformis",
+		"gejala":["Perut mual","Suhu badan tinggi","Haus","Warna kotoran hijau","Dehidrasi"],
+		"pengobatan":["Bayam Duri"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"Penyakit Liver",
+		"namaMedis":"Hepatitis",
+		"gejala":["Gejala kuning pada tubuh","Nafsu makan berkurang","Memar","Mimisan","Haus","Bau badan","Bau mulut","Kurang darah"],
+		"pengobatan":["Belimbing Manis"]
 	},
 	{
 		"nama":"",
