@@ -2,7 +2,7 @@
 
 (function () {
 
-    var apiUrl = appUrl + '/api/:tanamanid';
+    var apiUrl = appUrl + '/api/detailtanaman/:tanamanid';
     var apiUrlUser = appUrl + '/api/:id';
 
     ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateDetailtanaman));
@@ -13,7 +13,7 @@
 
     }
 
-    /*
+    
     document.addEventListener('DOMContentLoaded', function() {
         ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrlUser, function(data) {
             var userObject = JSON.parse(data);
@@ -21,6 +21,6 @@
             username.innerHTML = userObject['displayName'];
         }));
     });
-    */
+    
 
 })();

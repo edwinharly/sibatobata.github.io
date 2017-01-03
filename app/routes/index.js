@@ -9,6 +9,7 @@ var TanamanHandler = require(path + '/app/controllers/tanamanHandler.server.js')
 var PenyakitHandler = require(path + '/app/controllers/penyakitHandler.server.js');
 var DetailTanamanHandler = require(path + '/app/controllers/detailtanamanHandler.server.js');
 
+
 module.exports = function (app, passport) {
 
 	function isLoggedIn (req, res, next) {
@@ -52,7 +53,7 @@ module.exports = function (app, passport) {
 		res.sendFile(path + '/public/daftartanaman.html');
 	});
 
-	app.route('/detailtanaman').get(isLoggedIn, function(req, res) {
+	app.route('/detailtanaman/:tanamanid').get(isLoggedIn, function(req, res) {
 		res.sendFile(path + '/public/detailtanaman.html');
 	});
 	
@@ -84,7 +85,7 @@ module.exports = function (app, passport) {
 	app.route('/api/:id/tanaman')
 		.get(isLoggedIn, tanamanHandler.getTanaman);
 
-	app.route('/api/:tanamanid')
+	app.route('/api/detailtanaman/:tanamanid')
 		.get(isLoggedIn, detailtanamanHandler.getDetailtanaman);
 
 	app.route('/api/:id/penyakit')
