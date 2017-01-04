@@ -55,6 +55,7 @@ module.exports = function (app, passport) {
 
 	app.route('/detailtanaman/:tanamanid').get(isLoggedIn, function(req, res) {
 		res.sendFile(path + '/public/detailtanaman.html');
+		//console.log(req.query.tanamanid);
 	});
 	
 	/*

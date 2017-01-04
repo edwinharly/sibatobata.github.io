@@ -8,19 +8,22 @@ function DetailTanamanHandler() {
     this.getDetailtanaman = function (req, res) {
         mongoclient.connect(url, function (err, db) {
             var collection = db.collection('tanaman');
-            var tanamanid = req.params;
-            console.log('diatas tanamanid');
-            console.log(tanamanid);
+            // MAYBE THE ERROR IS HERE var tanamanid = req.params;
+            // TRY THIS
+            console.log('sebelum');
+            var tanamanid = req.params.tanamanid;
+            console.log(tanamanid);    // { tanamanid: ':tanamanid' }
+            console.log('sesudah');
             collection.findOne({"_id": tanamanid}, function (err, result) {
                 //console.log(result);
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log(result);
+                    //console.log(result);   // the result is null
                     //console.log(req);
                     res.json(result);
                 }
-                
+
                 db.close();
             });
         });
