@@ -14,7 +14,7 @@ function DetailTanamanHandler() {
             var tanamanid = req.params.tanamanid;
             console.log(tanamanid);    // { tanamanid: ':tanamanid' }
             console.log('sesudah');
-            collection.findOne({"_id": tanamanid}, function (err, result) {
+            collection.findOne({"nama": tanamanid}, function (err, result) {
                 //console.log(result);
                 if (err) {
                     console.log(err);
