@@ -48,16 +48,15 @@
 		"pengobatan":["Belimbing Manis"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
+		"nama":"Radang Usus Buntu",
+		"namaMedis":"Appendicitis",
+		"gejala":["Sakit perut","Perut kembung","Mual","Diare"],
+		"pengobatan":["Bidara Upas"]
 	},
 	{
-		"nama":"",
-		"namaMedis":"",
-		"gejala":"",
-		"pengobatan":""
-	},
-	
+		"nama":"Tipes",
+		"namaMedis":"Typhoid Fever",
+		"gejala":["Suhu badan tinggi","Sakit kepala","Diare","Infeksi tenggorokan","Sembelit","Muncul bintik merah"],
+		"pengobatan":["Bidara Upas"]
+	}	
 ]
