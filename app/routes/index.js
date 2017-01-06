@@ -87,7 +87,9 @@ module.exports = function (app, passport) {
 		.get(isLoggedIn, tanamanHandler.getTanaman);
 
 	app.route('/api/detailtanaman/:tanamanid')
-		.get(isLoggedIn, detailtanamanHandler.getDetailtanaman);
+		.get(isLoggedIn, detailtanamanHandler.getDetailtanaman)
+		.post(isLoggedIn, detailtanamanHandler.addUpvote)
+		.delete(isLoggedIn, detailtanamanHandler.removeUpvote);
 
 	app.route('/api/upvote/:tanamanid')
         .get(isLoggedIn, upvoteHandler.getUpvotes)
