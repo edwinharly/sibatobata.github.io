@@ -11,10 +11,10 @@ function DetailTanamanHandler() {
             var collection = db.collection('tanaman');
             // MAYBE THE ERROR IS HERE var tanamanid = req.params;
             // TRY THIS
-            console.log('sebelum');
+            //console.log('sebelum');
             var tanamanid = req.params.tanamanid;
-            console.log(tanamanid);    // { tanamanid: ':tanamanid' }
-            console.log('sesudah');
+            //console.log(tanamanid);    // { tanamanid: ':tanamanid' }
+            //console.log('sesudah');
             collection.findOne({"_id": new ObjectID(tanamanid)}, function (err, result) {
                 //console.log(result);
                 if (err) {
