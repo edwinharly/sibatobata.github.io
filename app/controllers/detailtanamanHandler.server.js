@@ -2,6 +2,7 @@
 
 var mongodb = require('mongodb');
 var mongoclient = mongodb.MongoClient;
+var ObjectID = mongodb.ObjectID;
 var url = 'mongodb://localhost:27017/sbbDB';
 
 function DetailTanamanHandler() {
@@ -14,7 +15,7 @@ function DetailTanamanHandler() {
             var tanamanid = req.params.tanamanid;
             console.log(tanamanid);    // { tanamanid: ':tanamanid' }
             console.log('sesudah');
-            collection.findOne({"nama": tanamanid}, function (err, result) {
+            collection.findOne({"_id": new ObjectID(tanamanid)}, function (err, result) {
                 //console.log(result);
                 if (err) {
                     console.log(err);
