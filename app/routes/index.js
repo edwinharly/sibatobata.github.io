@@ -89,6 +89,11 @@ module.exports = function (app, passport) {
 	app.route('/api/detailtanaman/:tanamanid')
 		.get(isLoggedIn, detailtanamanHandler.getDetailtanaman);
 
+	app.route('/api/upvote/:tanamanid')
+        .get(isLoggedIn, upvoteHandler.getUpvotes)
+        .post(isLoggedIn, upvoteHandler.addUpvote)
+        .delete(isLoggedIn, upvoteHandler.removeUpvote);
+
 	app.route('/api/:id/penyakit')
 		.get(isLoggedIn, penyakitHandler.getPenyakit);
 
@@ -105,10 +110,7 @@ module.exports = function (app, passport) {
 		.post(isLoggedIn, bookmarkHandler.addBookmark)
 		.delete(isLoggedIn, bookmarkHandler.removeBookmark);
 
-    app.route('/api/:id/upvote')
-        .get(isLoggedIn, upvoteHandler.getUpvotes)
-        .post(isLoggedIn, upvoteHandler.addUpvote)
-        .delete(isLoggedIn, upvoteHandler.removeUpvote);
+
 
 	// =====================================
     // FACEBOOK ROUTES =====================
