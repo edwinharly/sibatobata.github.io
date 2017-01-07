@@ -8,8 +8,6 @@
     var apiUrlUser = appUrl + '/api/:id';
     //console.log(apiUrl);
 
-    
-
     ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateDetailtanaman));
 
     function updateDetailtanaman (data) {
@@ -30,7 +28,7 @@
             "Pemeliharaan tanaman ini mudah, seperti tanaman lain di butuhkan cukup air dengan penyiraman atau menjaga kelembaban tanah dan pemupukan terutama pupuk dasar.",
             "Tanaman ini menghendaki tempat yang cukup matahari."
         ],
-        "upvotes": 0
+        "upvotes": []
         */
         var namaTanaman = document.getElementById('namaTanaman');
         var namaLatin = document.getElementById('namaLatin');
@@ -39,7 +37,7 @@
         var gmbrTanaman = document.getElementById('gambarTanaman');
         var poin = document.getElementById('poin');
 
-        namaTanaman.innerHTML = dbResult.nama + ' (' + dbResult.upvotes.toString() + ' poin)';
+        namaTanaman.innerHTML = dbResult.nama + ' (' + dbResult.upvotes.length + ' poin)';
         namaLatin.innerHTML = dbResult.namaLatin;
         for (var i=0; i<dbResult.khasiat.length; i++) {
             if (i !== dbResult.khasiat.length-1) {
@@ -54,8 +52,19 @@
             li.appendChild(text);
             olBudidaya.appendChild(li);
         }
-        poin.innerHTML = '(' + dbResult.upvotes.toString() + ' poin)';
+        
     }
+
+    function updateUpvote (data) {
+        var dbResult = JSON.parse(data);
+        var namaTanaman = document.getElementById('namaTanaman');
+        namaTanaman.innerHTML = dbResult.nama + ' (' + dbResult.upvotes.length + ' poin)';
+    }
+
+    var btnUpvote = document.getElementById('btnUpvote');
+    btnUpvote.addEventListener('click', function () {
+        ajaxFunctions.ready(ajaxFunctions.ajaxRequest('POST', apiUrl));
+    });
 
     
     document.addEventListener('DOMContentLoaded', function() {

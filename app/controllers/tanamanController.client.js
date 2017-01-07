@@ -27,7 +27,7 @@
             aTanaman.setAttribute('class', 'btn btn-default btn-lg');
             aTanaman.setAttribute('href', '/detailtanaman/' + dbResult[i]._id);
 
-            var node = document.createTextNode(dbResult[i].nama + ' (' + dbResult[i].upvotes + ' poin)');
+            var node = document.createTextNode(dbResult[i].nama + ' (' + dbResult[i].upvotes.length + ' poin)');
             aTanaman.appendChild(node);
             li.appendChild(aTanaman);
             ulTanaman.appendChild(li);
