@@ -63,7 +63,10 @@
 
     var btnUpvote = document.getElementById('btnUpvote');
     btnUpvote.addEventListener('click', function () {
-        ajaxFunctions.ready(ajaxFunctions.ajaxRequest('POST', apiUrl));
+        console.log('sebelum ajax');
+        ajaxFunctions.ajaxRequest('POST', apiUrl, function () {
+            
+        });
     });
 
     

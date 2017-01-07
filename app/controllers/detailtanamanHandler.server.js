@@ -34,14 +34,10 @@ function DetailTanamanHandler() {
         mongoclient.connect(url, function (err, db) {
             var collection = db.collection('tanaman');
             var tanamanid = req.params.tanamanid;
-            collection.updateOne({ "_id": new ObjectID(tanamanid) }, {$addToSet: { "upvotes": req.user.twitter }}, function(err, result) {
-                if (err){
-                    console.log(err);
-                } else {
-                    res.json(result);
-                }
-                db.close();
+            collection.updateOne({ "_id": new ObjectID(tanamanid) }, {$addToSet: { "upvotes": req.user.twitter }}, function (err, result) {
+                res.send('update success');
             }); 
+            db.close();
         });
     };
 
