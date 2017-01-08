@@ -195,6 +195,15 @@
 
     <script type="text/javascript" src="common/ajax-functions.js"></script>
     <script type="text/javascript" src="controllers/artikelController.client.js"></script>
+
+    <script>
+        var addBookmark = function (id) {
+            ajaxFunctions.ajaxRequest('POST', '/api/bookmark/'+id, function() {
+                console.log('dalam ajax post');
+                ajaxFunctions.ajaxRequest('GET', '/api/:id/artikel');
+            })
+        }
+    </script>
 </body>
 
 </html>

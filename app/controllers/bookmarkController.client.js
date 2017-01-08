@@ -6,6 +6,7 @@
    var unbookButton = document.querySelector('.btn-unbook');
    // var clickNbr = document.querySelector('#click-nbr');
    var apiUrl = appUrl + '/api/:id/bookmark';
+   var apiUrl2 = appUrl + '/api/bookmark/';
 
    function updateBookmark (data) {
         var dbResult = JSON.parse(data);
@@ -25,7 +26,7 @@
         for (var i=0; i<dbResult.bookmarkedArticles.length; i++)
         {
             var li = document.createElement('li');
-            //li.setAttribute('id', dbResult._id);
+            li.setAttribute('id', dbResult.bookmarkedArticles[i]._id);
             if (i%3==0){
                 li.setAttribute('class', 'first');
             }
@@ -49,6 +50,8 @@
             var aBook = document.createElement('a');
             aBook.setAttribute('class', 'book');
             aBook.setAttribute('href', '#');
+            aBook.setAttribute('onclick', 'removeBookmark(\'' + dbResult.bookmarkedArticles[i]._id + '\')');
+
             var iBook = document.createElement('i');
             iBook.setAttribute('class', 'fa fa-trash');
             iBook.setAttribute('aria-hidden', 'true');
@@ -67,6 +70,22 @@
 
    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark));
 
+   function removeBookmark (id) {
+       ajaxFunctions.ajaxRequest('DELETE', apiUrl2+id, function() {
+           console.log('dalam ajax delete');
+       });
+   }
+
+   document.addEventListener('DOMContentLoaded', function() {
+        ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrlUser, function(data) {
+            var userObject = JSON.parse(data);
+            var username = document.getElementById('display-name');
+            username.innerHTML = userObject['displayName'];
+        }));
+    });
+
+
+   /*
    bookButton.addEventListener('click', function () {
 
       ajaxFunctions.ajaxRequest('POST', apiUrl, function () {
@@ -82,5 +101,6 @@
       });
 
    }, false);
+   */
 
 })();
