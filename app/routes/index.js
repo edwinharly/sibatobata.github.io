@@ -72,6 +72,12 @@ module.exports = function (app, passport) {
 		res.sendFile(path + '/public/about.html');
 	});
 
+	app.route('/bookmarked').get(isLoggedIn, function(req, res) {
+		res.sendFile(path + '/public/bookmarked.html');
+	})
+
+	// API API API API API API API
+
 	app.route('/api/:id').get(isLoggedIn, function (req, res) {
 		res.json(req.user.twitter);
 	});
@@ -108,7 +114,9 @@ module.exports = function (app, passport) {
 		.delete(isLoggedIn, clickHandler.resetClicks);
 
 	app.route('/api/:id/bookmark')
-		.get(isLoggedIn, bookmarkHandler.getBookmarks)
+		.get(isLoggedIn, bookmarkHandler.getBookmarks);
+
+	app.route('/api/bookmark/:articleid')
 		.post(isLoggedIn, bookmarkHandler.addBookmark)
 		.delete(isLoggedIn, bookmarkHandler.removeBookmark);
 

@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav merek" id="judulkecil" href="./index.html">Si Bato Bata</a>
+                <a class="navbar-brand topnav merek" id="judulkecil" href="/">Si Bato Bata</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,7 +60,7 @@
                         <a href="#about">Nama User</a>
                     </li>
                     <li>
-                        <a href="./homepage.html">Keluar</a>
+                        <a href="/logout">Keluar</a>
                     </li>
                 </ul>
                 <form id="frmSearch" action="">
@@ -85,10 +85,11 @@
                         <h2>Bookmark</h2>
                         <hr class="intro-divider">
                         <div id="featured">
-                            <ul>
+                            <ul id="ulBookmarked">
+                                <!--
                                 <li class="first">
                                     <a href="#">
-                                        <img id="berita-gambar-1" src="img/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.jpg" alt="8 Jenis Jamur dan Khasiatnya Bagi Tubuh">
+                                        <img id="berita-gambar-1" src="/public/img/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.jpg" alt="8 Jenis Jamur dan Khasiatnya Bagi Tubuh">
                                     </a>
                                     <span></span>
                                     <p>8 Jenis jamur dan khasiatnya bagi tubuh.<br/>Merdeka.com - Ada begitu banyak jenis jamur yang menawarkan manfaat kesehatan. Pada dasarnya, jamur bukan sebuah tanaman atau binatang . . .
@@ -96,7 +97,7 @@
                                     <a class="link" href="#" onclick="showArtikel('https://www.merdeka.com/sehat/8-jenis-jamur-dan-khasiatnya-bagi-tubuh.html')">Baca</a>
                                     <a class="bookmark" href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
                                 </li>
-                                
+                                -->
                             </ul>
                         </div>
                     </div>
@@ -121,13 +122,13 @@
             <div>
                 <h3>Follow Us ! ! !</h3><br/>
                 <div id="logo1">
-                    <img src="img/fb.png">
+                    <img src="/public/img/fb.png">
                 </div>
                 <div id="logo2">
-                    <img src="img/twitter.png">
+                    <img src="/public/img/twitter.png">
                 </div>
                 <div id="logo2">
-                    <img src="img/ig.jpg">
+                    <img src="/public/img/ig.jpg">
                 </div>
             </div>
             <div>
@@ -194,7 +195,11 @@
     </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="/public/js/bootstrap.min.js"></script>
-    <<script src="/public/js/jquery.simplemodal-1.4.4.js"></script>
+    <script src="/public/js/jquery.simplemodal-1.4.4.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="/common/ajax-functions.js"></script>
+    <script type="text/javascript" src="/controllers/bookmarkController.client.js"></script>
 
 </body>
 

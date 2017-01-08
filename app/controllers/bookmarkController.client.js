@@ -8,11 +8,10 @@
    var apiUrl = appUrl + '/api/:id/bookmark';
 
    function updateBookmark (data) {
-      //var clicksObject = JSON.parse(data);
-      // clickNbr.innerHTML = clicksObject.clicks;
+      var dbResult = JSON.parse(data);
       // code utk update tampilan sesuai dengan kondisi bookmark/tidak
+      //console.log(dbResult);
       
-
    }
 
    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark));
@@ -20,7 +19,7 @@
    bookButton.addEventListener('click', function () {
 
       ajaxFunctions.ajaxRequest('POST', apiUrl, function () {
-         ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark);
+         //ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark);
       });
 
    }, false);
@@ -28,7 +27,7 @@
    unbookButton.addEventListener('click', function () {
 
       ajaxFunctions.ajaxRequest('DELETE', apiUrl, function () {
-         ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark);
+         //ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark);
       });
 
    }, false);
