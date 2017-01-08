@@ -8,10 +8,61 @@
    var apiUrl = appUrl + '/api/:id/bookmark';
 
    function updateBookmark (data) {
-      var dbResult = JSON.parse(data);
-      // code utk update tampilan sesuai dengan kondisi bookmark/tidak
-      //console.log(dbResult);
-      
+        var dbResult = JSON.parse(data);
+        // code utk update tampilan sesuai dengan kondisi bookmark/tidak
+        // console.log(dbResult);
+        /*
+        _id: 584e5d98872b90359eaf6546,
+        bookmarkedArticles: [ 
+            { 
+                url: 'https://www.merdeka.com/sehat/tanaman-herba-ini-ampuh-bunuh-sel-kanker-dalam-16-jam.html',
+                imgSrc: '/public/img/tanaman-herba-ini-ampuh-bunuh-sel-kanker-dalam-16-jam.jpg',
+                headline: 'Merdeka.com - Banyak orang yang belum familiar dengan tanaman herba bernama wormwood yang biasanya digunakan oleh masyarakat . . .',
+                title: 'Ini 4 tanaman herbal pengusir racun dari tubuh' 
+            } 
+        ]
+        */
+        for (var i=0; i<dbResult.bookmarkedArticles.length; i++)
+        {
+            var li = document.createElement('li');
+            //li.setAttribute('id', dbResult._id);
+            if (i%3==0){
+                li.setAttribute('class', 'first');
+            }
+
+            var aImg = document.createElement('a');
+            aImg.setAttribute('href', '#');
+            
+            var img = document.createElement('img');
+            img.setAttribute('src', dbResult.bookmarkedArticles[i].imgSrc);
+
+            var pTitle = document.createElement('p');
+            var pNode = document.createTextNode(dbResult.bookmarkedArticles[i].title + '\n' + dbResult.bookmarkedArticles[i].headline);
+            pTitle.appendChild(pNode);
+
+            var aLink = document.createElement('a');
+            aLink.setAttribute('class', 'link');
+            aLink.setAttribute('href', '#');
+            aLink.setAttribute('onclick', 'showArtikel(\'' + dbResult.bookmarkedArticles[i].url + '\')');
+            var aLinkNode = document.createTextNode('Baca'); 
+
+            //var aBook = document.createElement('a');
+            //aBook.setAttribute('class', 'book');
+            //aBook.setAttribute('href', '#');
+            //var iBook = document.createElement('i');
+            //iBook.setAttribute('class', 'fa fa-bookmark');
+            //iBook.setAttribute('aria-hidden', 'true');
+
+            var span = document.createElement('span');
+
+            aLink.appendChild(aLinkNode);
+            //aBook.appendChild(iBook);
+            aImg.appendChild(img);
+
+            var ulBookmarked = document.getElementById('ulBookmarked');
+            li.appendChild(aImg); li.appendChild(span); li.appendChild(pTitle); li.appendChild(aLink); //li.appendChild(aBook);
+            ulBookmarked.appendChild(li);
+        }
    }
 
    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark));
