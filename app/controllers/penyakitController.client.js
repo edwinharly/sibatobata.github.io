@@ -25,9 +25,9 @@
 
             var aPenyakit = document.createElement('a');
             aPenyakit.setAttribute('class', 'btn btn-default btn-lg');
-            aPenyakit.setAttribute('href', '#');
+            aPenyakit.setAttribute('href', '/detailpenyakit/' + dbResult[i]._id);
 
-            var node = document.createTextNode(dbResult[i].nama + ' (' + dbResult[i].upvotes + ' poin)');
+            var node = document.createTextNode(dbResult[i].nama + ' (' + dbResult[i].upvotes.length + ' poin)');
             aPenyakit.appendChild(node);
             li.appendChild(aPenyakit);
             ulPenyakit.appendChild(li);
