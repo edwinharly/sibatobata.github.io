@@ -63,9 +63,12 @@
 
     var btnUpvote = document.getElementById('btnUpvote');
     btnUpvote.addEventListener('click', function () {
-        console.log('sebelum ajax');
+        //console.log('sebelum ajax');
         ajaxFunctions.ajaxRequest('POST', apiUrl, function () {
-            
+            ajaxFunctions.ajaxRequest('GET', apiUrl, updateDetailtanaman);
+            var btnUpvote = document.getElementById('btnUpvote');
+            btnUpvote.innerHTML = "Upvoted !";
+            btnUpvote.setAttribute('class', 'btn btn-success btn-lg btnLike fa fa-lg fa-arrow-up');
         });
     });
 
