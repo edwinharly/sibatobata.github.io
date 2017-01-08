@@ -46,21 +46,21 @@
             aLink.setAttribute('onclick', 'showArtikel(\'' + dbResult.bookmarkedArticles[i].url + '\')');
             var aLinkNode = document.createTextNode('Baca'); 
 
-            //var aBook = document.createElement('a');
-            //aBook.setAttribute('class', 'book');
-            //aBook.setAttribute('href', '#');
-            //var iBook = document.createElement('i');
-            //iBook.setAttribute('class', 'fa fa-bookmark');
-            //iBook.setAttribute('aria-hidden', 'true');
+            var aBook = document.createElement('a');
+            aBook.setAttribute('class', 'book');
+            aBook.setAttribute('href', '#');
+            var iBook = document.createElement('i');
+            iBook.setAttribute('class', 'fa fa-trash');
+            iBook.setAttribute('aria-hidden', 'true');
 
             var span = document.createElement('span');
 
             aLink.appendChild(aLinkNode);
-            //aBook.appendChild(iBook);
+            aBook.appendChild(iBook);
             aImg.appendChild(img);
 
             var ulBookmarked = document.getElementById('ulBookmarked');
-            li.appendChild(aImg); li.appendChild(span); li.appendChild(pTitle); li.appendChild(aLink); //li.appendChild(aBook);
+            li.appendChild(aImg); li.appendChild(span); li.appendChild(pTitle); li.appendChild(aLink); li.appendChild(aBook);
             ulBookmarked.appendChild(li);
         }
    }
