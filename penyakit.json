@@ -3,60 +3,70 @@
 		"nama":"Diabetes",
 		"namaMedis":"Diabetes melitus",
 		"gejala":["Haus","Penurunan berat badan","Luka tidak sembuh-sembuh"],
-		"pengobatan":["Alpukat","Bambu Tali"]
+		"pengobatan":["Alpukat","Bambu Tali"],
+		"upvotes": []
 	},
 	{
 		"nama":"Anyang-Anyangan",
 		"namaMedis":"Cystitis",
 		"gejala":["Rasa sakit saat buang air kecil","Sakit di bagian bawah perut","Tidak ada air kencing saat ingin buang air kecil"],
-		"pengobatan":["Anyang-Anyang"]
+		"pengobatan":["Anyang-Anyang"],
+		"upvotes": []
 	},
 	{
 		"nama":"Kegemukan",
 		"namaMedis":"Obesitas",
 		"gejala":["Depresi","Sulit tidur","Nyeri punggung","Sulit bernafas","Sering ngantuk","Keringat berlebihan"],
-		"pengobatan":["Bangle / Bengle"]
+		"pengobatan":["Bangle / Bengle"],
+		"upvotes": []
 	},
 	{
 		"nama":"TBC Kelenjar",
 		"namaMedis":"Scrofula",
 		"gejala":["Muncul benjolan tanpa rasa sakit","Nafsu makan berkurang","Demam","Menggigil"],
-		"pengobatan":["Bayam Duri"]
+		"pengobatan":["Bayam Duri"],
+		"upvotes": []
 	},
 	{
 		"nama":"Tuberkulosis",
 		"namaMedis":"Tuberculosis",
 		"gejala":["Keringat malam","Batuk-batuk","Batuk berdarah","Sulit bernafas","Nyeri dada","Nafsu makan berkurang"],
-		"pengobatan":["Bambu Tali"]
+		"pengobatan":["Bambu Tali"],
+		"upvotes": []
 	},
 	{
 		"nama":"Penyakit Kuning",
 		"namaMedis":"Icterus",
 		"gejala":["Gatal-gatal","Nyeri perut","Nyeri sendi","Kulit kuning","Nafsu makan berkurang","Rambut rontok"],
-		"pengobatan":["Bangle/ Bengle"]
+		"pengobatan":["Bangle/ Bengle"],
+		"upvotes": []
 	},
 	{
 		"nama":"Radang Usus",
 		"namaMedis":"Appendix vermiformis",
 		"gejala":["Perut mual","Suhu badan tinggi","Haus","Warna kotoran hijau","Dehidrasi"],
-		"pengobatan":["Bayam Duri"]
+		"pengobatan":["Bayam Duri"],
+		"upvotes": []
 	},
 	{
 		"nama":"Penyakit Liver",
 		"namaMedis":"Hepatitis",
 		"gejala":["Gejala kuning pada tubuh","Nafsu makan berkurang","Memar","Mimisan","Haus","Bau badan","Bau mulut","Kurang darah"],
-		"pengobatan":["Belimbing Manis"]
+		"pengobatan":["Belimbing Manis"],
+		"upvotes": []
 	},
 	{
 		"nama":"Radang Usus Buntu",
 		"namaMedis":"Appendicitis",
 		"gejala":["Sakit perut","Perut kembung","Mual","Diare"],
-		"pengobatan":["Bidara Upas"]
+		"pengobatan":["Bidara Upas"],
+		"upvotes": []
 	},
 	{
 		"nama":"Tipes",
 		"namaMedis":"Typhoid Fever",
 		"gejala":["Suhu badan tinggi","Sakit kepala","Diare","Infeksi tenggorokan","Sembelit","Muncul bintik merah"],
-		"pengobatan":["Bidara Upas"]
+		"pengobatan":["Bidara Upas"],
+		"upvotes": []
 	}	
 ]
