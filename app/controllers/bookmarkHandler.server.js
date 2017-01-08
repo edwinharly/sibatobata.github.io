@@ -18,7 +18,7 @@ function BookmarkHandler() {
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log(result);
+                    //console.log(result);
 
                     res.json(result);
                 }
@@ -127,6 +127,74 @@ function BookmarkHandler() {
 				}
 			);
 		*/
+		var tmpArticle;
+		
+		function fetchArticle() {
+			mongoclient.connect(url, function (err, db) {
+				//console.log('masuk connect');
+				var usersCollection = db.collection('users');
+				var articlesCollection = db.collection('article');
+				var url = req.params.articleid;
+
+				articlesCollection.findOne({ "url": url}, {"_id": 0}, function (err, result) {
+					if (err) {
+						console.log(err);
+					} else {
+						console.log('isi tmpArticle')
+						//console.log(result);
+						tmpArticle = result;
+						console.log(tmpArticle.url);
+						console.log(tmpArticle.title);
+
+					}
+				});
+
+
+				//console.log('bawah cari artikel');
+				//console.log(tmpArticle);
+				
+				//console.log('sebelum close');
+				db.close();
+			});
+		}
+		fetchArticle();
+
+		function updateToUser() {
+			mongoclient.connect(url, function (err, db) {
+				var usersCollection = db.collection('users');
+				var articlesCollection = db.collection('article');
+				//var url = req.params.articleid;
+				
+				usersCollection.updateOne(
+					{ "twitter.id": req.user.twitter.id }, 
+					{
+						$pull: 
+						{ 
+							"bookmarkedArticles": 
+							{ 
+								"url": tmpArticle.url,
+								"imgSrc": tmpArticle.imgSrc,
+								"headline": tmpArticle.headline,
+								"title": tmpArticle.title 
+							} 
+						}
+					}, 
+					function (err, result) {
+						//console.log(req.user.twitter.id);
+						//res.send('update success');
+						if (err) {
+							console.log(err);
+						} else {
+							console.log('update user bookmark')
+							console.log(result);
+						}
+					}
+				); 
+				
+				db.close();
+			});
+		}
+		setTimeout(updateToUser, 1000);
 	};
 }
 

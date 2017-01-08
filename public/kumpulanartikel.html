@@ -200,9 +200,11 @@
     <script>
         var addBookmark = function (id) {
             ajaxFunctions.ajaxRequest('POST', '/api/bookmark/'+id, function() {
-                console.log('dalam ajax post');
+                //console.log('dalam ajax post');
                 ajaxFunctions.ajaxRequest('GET', '/api/:id/artikel');
-            })
+                
+            });
+            window.alert("Artikel berhasil dibookmark");
         }
     </script>
 </body>

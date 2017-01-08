@@ -49,8 +49,7 @@
 
             var aBook = document.createElement('a');
             aBook.setAttribute('class', 'book');
-            aBook.setAttribute('href', '#');
-            aBook.setAttribute('onclick', 'removeBookmark(\'' + dbResult.bookmarkedArticles[i]._id + '\')');
+            aBook.setAttribute('onclick', 'removeBookmark(\'' + dbResult.bookmarkedArticles[i].url + '\')');
 
             var iBook = document.createElement('i');
             iBook.setAttribute('class', 'fa fa-trash');
@@ -70,8 +69,8 @@
 
    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark));
 
-   function removeBookmark (id) {
-       ajaxFunctions.ajaxRequest('DELETE', apiUrl2+id, function() {
+   function removeBookmark (url) {
+       ajaxFunctions.ajaxRequest('DELETE', apiUrl2+url, function() {
            console.log('dalam ajax delete');
        });
    }
