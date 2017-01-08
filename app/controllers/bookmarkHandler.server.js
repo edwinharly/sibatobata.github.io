@@ -27,7 +27,7 @@ function BookmarkHandler() {
             });
         });
 	};
-
+	
 	this.addBookmark = function (req, res) {
 		/*
 		SbbDB
@@ -71,6 +71,7 @@ function BookmarkHandler() {
 				db.close();
 			});
 		}
+
 		fetchArticle();
 
 		//console.log(tmpArticle);
@@ -110,7 +111,7 @@ function BookmarkHandler() {
 				db.close();
 			});
 		}
-		updateToUser();
+		setTimeout(updateToUser, 1000);
 		
 		//console.log('bawah');
 	};
