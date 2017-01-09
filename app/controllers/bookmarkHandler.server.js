@@ -164,13 +164,15 @@ function BookmarkHandler() {
 				var usersCollection = db.collection('users');
 				var articlesCollection = db.collection('article');
 				//var url = req.params.articleid;
-				// db.mycollection.update(
+				/*
+				 db.mycollection.update(
 						{'_id': ObjectId("5150a1199fac0e6910000002")}, 
 						{ $pull: { "items" : { id: 23 } } },
 					false,
 					true 
 					);
-				
+				*/
+
 				usersCollection.updateOne(
 					{ "twitter.id": req.user.twitter.id }, 
 					{
