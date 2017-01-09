@@ -83,6 +83,10 @@ module.exports = function (app, passport) {
 		res.sendFile(path + '/public/bookmarked.html');
 	})
 
+	app.route('/kenalipenyakit').get(isLoggedIn, function(req, res) {
+		res.sendFile(path + '/public/sibatobataAI.html');
+	})
+
 	// API API API API API API API
 
 	app.route('/api/:id').get(isLoggedIn, function (req, res) {
