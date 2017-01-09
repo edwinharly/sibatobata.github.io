@@ -164,6 +164,12 @@ function BookmarkHandler() {
 				var usersCollection = db.collection('users');
 				var articlesCollection = db.collection('article');
 				//var url = req.params.articleid;
+				// db.mycollection.update(
+						{'_id': ObjectId("5150a1199fac0e6910000002")}, 
+						{ $pull: { "items" : { id: 23 } } },
+					false,
+					true 
+					);
 				
 				usersCollection.updateOne(
 					{ "twitter.id": req.user.twitter.id }, 
@@ -172,13 +178,15 @@ function BookmarkHandler() {
 						{ 
 							"bookmarkedArticles": 
 							{ 
-								"url": tmpArticle.url,
+								"url": tmpArticle.url//,
+								/*
 								"imgSrc": tmpArticle.imgSrc,
 								"headline": tmpArticle.headline,
 								"title": tmpArticle.title 
+								*/
 							} 
 						}
-					}, 
+					}, false, true,
 					function (err, result) {
 						//console.log(req.user.twitter.id);
 						//res.send('update success');
