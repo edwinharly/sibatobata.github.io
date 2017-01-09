@@ -39,6 +39,7 @@
 
         namaTanaman.innerHTML = dbResult.nama + ' (' + dbResult.upvotes.length + ' poin)';
         namaLatin.innerHTML = dbResult.namaLatin;
+        gmbrTanaman.setAttribute('src', dbResult.imgSrc);
         for (var i=0; i<dbResult.khasiat.length; i++) {
             if (i !== dbResult.khasiat.length-1) {
                 khasiatTanaman.innerHTML += dbResult.khasiat[i]+', ';
@@ -51,6 +52,16 @@
             var text = document.createTextNode(dbResult.budidaya[j]);
             li.appendChild(text);
             olBudidaya.appendChild(li);
+        }
+
+        if (dbResult.verified) {
+            var verified = document.getElementById('verified');
+            var text = document.createTextNode("Informasi ini telah diverifikasi oleh " + dbResult.verified);
+            var cntg = document.createElement('i');
+            cntg.setAttribute('class', 'fa fa-check-square fa-2x');
+            verified.appendChild(cntg);
+            verified.appendChild(text);
+
         }
         
     }
