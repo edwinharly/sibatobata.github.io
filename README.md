@@ -1,4 +1,4 @@
-### Fitur-Fitur yang akan dibangun :
+### Fitur-Fitur :
 1. Sajikan informasi mengenai tanaman obat”an selengkap mungkin (khasiat, efek samping, dll)
 2. Pencarian tanaman obat yg sesuai berdasarkan gejala atau jenis penyakit
 3. Membantu user utk track kembali post yg diingikan dgn bookmark
