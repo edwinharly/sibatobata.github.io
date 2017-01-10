@@ -54,11 +54,11 @@ function BookmarkHandler() {
 					if (err) {
 						console.log(err);
 					} else {
-						console.log('isi tmpArticle')
+						//console.log('isi tmpArticle')
 						//console.log(result);
 						tmpArticle = result;
-						console.log(tmpArticle.url);
-						console.log(tmpArticle.title);
+						//console.log(tmpArticle.url);
+						//console.log(tmpArticle.title);
 
 					}
 				});
@@ -102,8 +102,8 @@ function BookmarkHandler() {
 						if (err) {
 							console.log(err);
 						} else {
-							console.log('update user bookmark')
-							console.log(result);
+							//console.log('update user bookmark')
+							//console.log(result);
 						}
 					}
 				); 
@@ -117,24 +117,15 @@ function BookmarkHandler() {
 	};
 
 	this.removeBookmark = function (req, res) {
-		/*
-		SbbDB
-			.findOneAndUpdate({ 'user.twitterId': req.sbbDB.user.twitterId }, { $pull: { 'user.bookmarkedArticleId': articleUrl } })
-			.exec(function (err, result) {
-					if (err) { throw err; }
-
-					res.json(result.user);
-				}
-			);
-		*/
 		var tmpArticle;
 		
 		function fetchArticle() {
 			mongoclient.connect(url, function (err, db) {
 				//console.log('masuk connect');
-				var usersCollection = db.collection('users');
+				//var usersCollection = db.collection('users');
 				var articlesCollection = db.collection('article');
 				var url = req.params.articleid;
+				console.log(url);
 
 				articlesCollection.findOne({ "url": url}, {"_id": 0}, function (err, result) {
 					if (err) {
@@ -162,7 +153,7 @@ function BookmarkHandler() {
 		function updateToUser() {
 			mongoclient.connect(url, function (err, db) {
 				var usersCollection = db.collection('users');
-				var articlesCollection = db.collection('article');
+				//var articlesCollection = db.collection('article');
 				//var url = req.params.articleid;
 				/*
 				 db.mycollection.update(
@@ -175,27 +166,24 @@ function BookmarkHandler() {
 
 				usersCollection.updateOne(
 					{ "twitter.id": req.user.twitter.id }, 
-					{
-						$pull: 
-						{ 
-							"bookmarkedArticles": 
-							{ 
-								"url": tmpArticle.url//,
+					{ $pull: { "bookmarkedArticles": { 
 								/*
+								"url": tmpArticle.url,
 								"imgSrc": tmpArticle.imgSrc,
 								"headline": tmpArticle.headline,
-								"title": tmpArticle.title 
 								*/
+								"title": tmpArticle.title 
+								
 							} 
 						}
-					}, false, true,
+					},
 					function (err, result) {
 						//console.log(req.user.twitter.id);
 						//res.send('update success');
 						if (err) {
 							console.log(err);
 						} else {
-							console.log('update user bookmark')
+							console.log('remove user bookmark')
 							console.log(result);
 						}
 					}

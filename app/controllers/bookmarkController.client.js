@@ -7,11 +7,12 @@
    // var clickNbr = document.querySelector('#click-nbr');
    var apiUrl = appUrl + '/api/:id/bookmark';
    var apiUrl2 = appUrl + '/api/bookmark/';
+   var apiUrlUser = appUrl + '/api/:id';
 
    function updateBookmark (data) {
         var dbResult = JSON.parse(data);
         // code utk update tampilan sesuai dengan kondisi bookmark/tidak
-        // console.log(dbResult);
+        console.log(dbResult);
         /*
         _id: 584e5d98872b90359eaf6546,
         bookmarkedArticles: [ 
@@ -49,8 +50,15 @@
 
             var aBook = document.createElement('a');
             aBook.setAttribute('class', 'book');
+            aBook.setAttribute('href', '#');
             aBook.setAttribute('onclick', 'removeBookmark(\'' + dbResult.bookmarkedArticles[i].url + '\')');
-
+            /*
+            aBook.addEventListener('click', function() {
+                ajaxFunctions.ajaxRequest('DELETE', dbResult.bookmarkedArticles[i].url, function() {
+                    //console.log('dalam ajax delete');
+                });
+            })
+            */
             var iBook = document.createElement('i');
             iBook.setAttribute('class', 'fa fa-trash');
             iBook.setAttribute('aria-hidden', 'true');
@@ -69,11 +77,13 @@
 
    ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateBookmark));
 
+   /*
    function removeBookmark (url) {
        ajaxFunctions.ajaxRequest('DELETE', apiUrl2+url, function() {
            console.log('dalam ajax delete');
        });
    }
+   */
 
    document.addEventListener('DOMContentLoaded', function() {
         ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrlUser, function(data) {

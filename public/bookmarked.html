@@ -216,9 +216,9 @@
     <script type="text/javascript" src="/controllers/bookmarkController.client.js"></script>
 
     <script>
-        var removeBookmark = function (id) {
-            ajaxFunctions.ajaxRequest('DELETE', '/api/bookmark/'+id, function() {
-                //console.log('dalam ajax post');
+        var removeBookmark = function (url) {
+            ajaxFunctions.ajaxRequest('DELETE', '/api/bookmark/'+url, function() {
+                console.log('dalam ajax post');
                 
             });
             window.alert("Artikel berhasil dihapus dari bookmark");
